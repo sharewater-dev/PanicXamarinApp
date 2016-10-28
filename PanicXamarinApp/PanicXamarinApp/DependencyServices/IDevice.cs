@@ -10,5 +10,6 @@ namespace PanicXamarinApp.DependencyServices
     public interface IDevice
     {
         UserDeviceModel GetIdentifier(int simSlot);
+
     }
 }

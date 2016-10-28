@@ -25,12 +25,21 @@ namespace PanicXamarinApp.Droid.DependencyService
         public UserDeviceModel GetIdentifier(int simSlot)
         {
             UserDeviceModel info = new UserDeviceModel();
-            TelephonyManager IMEI_telManager = (TelephonyManager)Forms.Context.GetSystemService(Context.TelephonyService);         
-            if (IMEI_telManager != null)
+            try
             {
-                info.DeviceInformation.IMEI = IMEI_telManager.GetDeviceId(simSlot);
-                info.DeviceInformation.PhoneNumber = IMEI_telManager.Line1Number;
-            }               
+             
+                TelephonyManager IMEI_telManager = (TelephonyManager)Forms.Context.GetSystemService(Context.TelephonyService);
+                if (IMEI_telManager != null)
+                {
+                    info.DeviceInformation.IMEI = IMEI_telManager.GetDeviceId(simSlot);
+                    info.DeviceInformation.PhoneNumber = IMEI_telManager.Line1Number;
+                }
+            }
+            catch (Exception)
+            {
+             
+            }
+          
             return info;
         }
     }

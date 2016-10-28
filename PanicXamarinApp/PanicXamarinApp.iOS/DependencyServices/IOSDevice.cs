@@ -17,10 +17,19 @@ namespace PanicXamarinApp.iOS.DependencyServices
         public UserDeviceModel GetIdentifier(int simSlot)
         {
             UserDeviceModel info = new UserDeviceModel();
-            var UniqueID = UIDevice.CurrentDevice.IdentifierForVendor;
-            if (UniqueID != null)
-                info.DeviceInformation.UniqueID = UniqueID.ToString();
-   
+            try
+            {
+
+                var UniqueID = UIDevice.CurrentDevice.IdentifierForVendor;
+                if (UniqueID != null)
+                    info.DeviceInformation.UniqueID = UniqueID.Description;
+            }
+            catch (Exception)
+            {
+                info.DeviceInformation.UniqueID = "000000000000";
+            }
+
+
             //   string device_id = UIDevice.CurrentDevice.IdentifierForVendor?.
 
             //var query = new SecRecord(SecKind.GenericPassword);

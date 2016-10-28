@@ -10,5 +10,10 @@ namespace PanicXamarinApp.EntityModel
     {
         public DeviceInfo DeviceInformation { get; set; }
         public UserInfo UserInformation { get; set; }
+        public UserDeviceModel()
+        {
+            DeviceInformation = new DeviceInfo();
+            UserInformation = new UserInfo();
+        }
     }
 }
