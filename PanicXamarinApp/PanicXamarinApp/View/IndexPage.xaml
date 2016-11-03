@@ -1,12 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PanicXamarinApp.View.IndexPage">
-  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" >
-    <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.2, AutoSize" />
-    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="0,5,0,0" >
-      <Image  x:Name="imgPanic" Source="Panic.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ></Image>
-      <Label x:Name="lblStatus" />
-    </StackLayout>
+             x:Class="PanicXamarinApp.View.IndexPage"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:local="clr-namespace:PanicXamarinApp.CustomControls;assembly=PanicXamarinApp"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             >
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" Padding="0,0,0,0" >
+    <Grid  Padding="10,10,10,10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="8*" />
+        <RowDefinition Height="2*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*" />
+        <ColumnDefinition Width="8*" />
+        <ColumnDefinition Width="2*" />
+      </Grid.ColumnDefinitions>
+       <ActivityIndicator IsVisible="{Binding IsBusy}" WidthRequest="50" HeightRequest="50"  Color="Black" IsRunning="{Binding IsBusy}" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.2, AutoSize" />
+       <StackLayout   Grid.Row="0" Grid.Column="0"  ></StackLayout>
+       <StackLayout    Grid.Row="0" Grid.Column="1"  >        
+          <cv:CarouselView ItemsSource="{Binding Emergencys}" >
+            <cv:CarouselView.ItemTemplate>
+              <DataTemplate>
+                <Grid>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                  </Grid.RowDefinitions>      
+                    <!--LoadingPlaceholder="placeholderProfileImage.png"--><!--
+                  <ffimageloading:CachedImage x:Name="imgPanic" Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"
+                                              HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" DownsampleToViewSize="true"
+                                             >
+                    <ffimageloading:CachedImage.Transformations>
+                      <fftransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                  </ffimageloading:CachedImage>-->
+                  <!--<StackLayout Grid.Row="1" Padding="12" >
+                    <Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                  </StackLayout>-->
+                </Grid>
+              </DataTemplate>
+            </cv:CarouselView.ItemTemplate>
+          </cv:CarouselView>      
+        <Label x:Name="lblStatus" IsVisible="false" />
+       </StackLayout>
+       <StackLayout  Grid.Row="0" Grid.Column="2"   ></StackLayout>
+      <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Vertical" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  >
+      
+        <!--Start : Button : Login-->
+        <local:NativeButton x:Name="btnLogin" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                            FontSize="14" TextColor="Black" Text="LOG IN"  HorizontalOptions="Center"  Clicked="BtnLogin_Clicked">
+          <local:NativeButton.BorderRadius>
+            <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+          </local:NativeButton.BorderRadius>
+          <local:NativeButton.WidthRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+          </local:NativeButton.WidthRequest>
+        </local:NativeButton>
+        <!--End : Button : Login-->
+
+        <!--Start : Button : Register-->
+        <local:NativeButton x:Name="btnRegister" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                           FontSize="14" TextColor="Black" Text="REGISTER"  HorizontalOptions="Center"  Clicked="BtnRegister_Clicked">
+          <local:NativeButton.BorderRadius>
+            <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+          </local:NativeButton.BorderRadius>
+          <local:NativeButton.WidthRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+          </local:NativeButton.WidthRequest>
+        </local:NativeButton>
+        <!--End : Button : Register-->
+
+
+      </StackLayout>
+
+    </Grid>
   </StackLayout>
 </ContentPage>

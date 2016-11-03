@@ -17,16 +17,20 @@ namespace PanicXamarinApp.View {
     public partial class IndexPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Image imgPanic;
+        private global::Xamarin.Forms.Label lblStatus;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Label lblStatus;
+        private global::PanicXamarinApp.CustomControls.NativeButton btnLogin;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::PanicXamarinApp.CustomControls.NativeButton btnRegister;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(IndexPage));
-            imgPanic = this.FindByName<global::Xamarin.Forms.Image>("imgPanic");
             lblStatus = this.FindByName<global::Xamarin.Forms.Label>("lblStatus");
+            btnLogin = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnLogin");
+            btnRegister = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnRegister");
         }
     }
 }

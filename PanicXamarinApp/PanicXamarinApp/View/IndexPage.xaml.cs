@@ -22,8 +22,8 @@ namespace PanicXamarinApp.View
             // Created  TapGestureRecognizer for panic button tapped event
             TapGestureRecognizer panicButtion = new TapGestureRecognizer();
             panicButtion.Tapped += PanicButtion_Tapped;
-            imgPanic.GestureRecognizers.Add(panicButtion);   
-        }
+           // imgPanic.GestureRecognizers.Add(panicButtion);         
+        }    
 
         #region Events 
         private async void PanicButtion_Tapped(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace PanicXamarinApp.View
                         status += ", UniqueID : " + test.DeviceInformation.UniqueID;
                         status += ", PhoneNumber : Apple can't shared phone number" ;
                     }
-                    lblStatus.Text = status;
+                  //  lblStatus.Text = status;
                 }
                 else
                 {
@@ -69,7 +69,19 @@ namespace PanicXamarinApp.View
             }
         }
 
+        private async void BtnRegister_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alert", "We are working on...", "Okay");
+        }
+
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Alert", "We are working on...", "Okay");
+        }
+
         #endregion
+
+        #region Functions
 
         public UserDeviceModel GetDeviceUniqueId()
         {
@@ -77,5 +89,6 @@ namespace PanicXamarinApp.View
             UserDeviceModel deviceIdentifier = device.GetIdentifier(0);
             return deviceIdentifier;
         }
+        #endregion
     }
 }
