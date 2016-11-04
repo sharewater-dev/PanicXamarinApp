@@ -166,17 +166,6 @@
             Indicates if the transparency channel should be loaded. By default this value comes from ImageService.Instance.Config.LoadWithTransparencyChannel.
             </summary>
         </member>
-        <member name="F:FFImageLoading.Forms.CachedImage.BitmapOptimizationsProperty">
-            <summary>
-            The bitmap optimizations property.
-            </summary>
-        </member>
-        <member name="P:FFImageLoading.Forms.CachedImage.BitmapOptimizations">
-            <summary>
-            Enables or disables the bitmap optimizations.
-            </summary>
-            <value>The bitmap optimizations.</value>
-        </member>
         <member name="F:FFImageLoading.Forms.CachedImage.FadeAnimationEnabledProperty">
             <summary>
             The fade animation enabled property.
@@ -328,24 +317,6 @@
             Command parameter: CachedImageEvents.FinishEventArgs
             </summary>
             <value>The finish command.</value>
-        </member>
-        <member name="E:FFImageLoading.Forms.CachedImage.DownloadStarted">
-            <summary>
-            Occurs when an image starts downloading from web.
-            </summary>
-        </member>
-        <member name="F:FFImageLoading.Forms.CachedImage.DownloadStartedCommandProperty">
-            <summary>
-            The DownloadStartedCommandProperty.
-            </summary>
-        </member>
-        <member name="P:FFImageLoading.Forms.CachedImage.DownloadStartedCommand">
-            <summary>
-            Gets or sets the DownloadStartedCommand.
-             Occurs when an image starts downloading from web.
-            Command parameter: EventArgs
-            </summary>
-            <value>The download started command.</value>
         </member>
         <member name="F:FFImageLoading.Forms.CachedImage.CacheTypeProperty">
             <summary>

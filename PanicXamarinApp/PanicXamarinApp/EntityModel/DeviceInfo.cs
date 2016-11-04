@@ -11,5 +11,6 @@ namespace PanicXamarinApp.EntityModel
         public string IMEI { get; set; }
         public string PhoneNumber { get; set; }
         public string UniqueID { get; set; }
+
     }
 }

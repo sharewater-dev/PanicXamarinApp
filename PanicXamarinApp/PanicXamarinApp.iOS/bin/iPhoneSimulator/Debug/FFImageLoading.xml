@@ -4,6 +4,91 @@
         <name>FFImageLoading</name>
     </assembly>
     <members>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.UsesSameNativeControl(FFImageLoading.Work.IImageLoaderTask)">
+            <summary>
+            Indicates if the task uses the same native control
+            </summary>
+            <returns><c>true</c>, if same native control is used, <c>false</c> otherwise.</returns>
+            <param name="task">Task to check.</param>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.GetKey(System.String,System.Boolean)">
+            <summary>
+            Gets the cache key for this image loading task.
+            </summary>
+            <value>The cache key.</value>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.CanUseMemoryCache(System.String)">
+            <summary>
+            Indicates if memory cache should be used for the request
+            </summary>
+            <returns><c>true</c>, if memory cache should be used, <c>false</c> otherwise.</returns>
+            <param name="path">Path.</param>
+        </member>
+        <member name="P:FFImageLoading.Work.IImageLoaderTask.Parameters">
+            <summary>
+            Gets the parameters used to retrieve the image.
+            </summary>
+            <value>The parameters to retrieve the image.</value>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.RunAsync">
+            <summary>
+            Runs the image loading task: gets image from file, url, asset or cache. Then assign it to the imageView.
+            </summary>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.TryLoadingFromCacheAsync">
+            <summary>
+            Tries to load requested image from the cache asynchronously.
+            </summary>
+            <returns>A boolean indicating if image was loaded from cache.</returns>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.PrepareAndTryLoadingFromCacheAsync">
+            <summary>
+            Prepares the instance before it runs.
+            </summary>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.CancelIfNeeded">
+            <summary>
+            Cancel current task only if needed
+            </summary>
+        </member>
+        <member name="M:FFImageLoading.Work.IImageLoaderTask.LoadFromStreamAsync(System.IO.Stream)">
+            <summary>
+            Loads the image from given stream asynchronously.
+            </summary>
+            <returns>An awaitable task.</returns>
+            <param name="stream">The stream to get data from.</param>
+        </member>
+        <member name="M:FFImageLoading.Work.IWorkScheduler.Cancel(FFImageLoading.Work.IImageLoaderTask)">
+            <summary>      
+            Cancels any pending work for the task.        
+            </summary>        
+            <param name="task">Image loading task to cancel</param>
+        </member>
+        <member name="M:FFImageLoading.Work.IWorkScheduler.Cancel(System.Func{FFImageLoading.Work.IImageLoaderTask,System.Boolean})">
+            <summary>
+            Cancels tasks that match predicate.
+            </summary>
+            <param name="predicate">Predicate for finding relevant tasks to cancel.</param>
+        </member>
+        <member name="M:FFImageLoading.Work.IWorkScheduler.LoadImage(FFImageLoading.Work.IImageLoaderTask)">
+            <summary>      
+            Schedules the image loading. If image is found in cache then it returns it, otherwise it loads it.        
+            </summary>        
+            <param name="key">Key for cache lookup.</param>       
+            <param name="task">Image loading task.</param>
+        </member>
+        <member name="M:FFImageLoading.Work.WorkScheduler.Cancel(System.Func{FFImageLoading.Work.IImageLoaderTask,System.Boolean})">
+            <summary>
+            Cancels tasks that match predicate.
+            </summary>
+            <param name="predicate">Predicate for finding relevant tasks to cancel.</param>
+        </member>
+        <member name="M:FFImageLoading.Work.WorkScheduler.LoadImage(FFImageLoading.Work.IImageLoaderTask)">
+            <summary>
+            Schedules the image loading. If image is found in cache then it returns it, otherwise it loads it.
+            </summary>
+            <param name="task">Image loading task.</param>
+        </member>
         <member name="M:FFImageLoading.Work.TaskParameter.FromFile(System.String)">
             <summary>
             Constructs a new TaskParameter to load an image from a file.
@@ -161,32 +246,6 @@
         </member>
         <!-- Badly formed XML comment ignored for member "M:FFImageLoading.Work.TaskParameter.Error(System.Action{System.Exception})" -->
         <!-- Badly formed XML comment ignored for member "M:FFImageLoading.Work.TaskParameter.Finish(System.Action{FFImageLoading.Work.IScheduledWork})" -->
-        <member name="M:FFImageLoading.Work.TaskParameter.DownloadStarted(System.Action{FFImageLoading.DownloadInformation})">
-            <summary>
-            If image starts downloading from Internet this callback is called
-            </summary>
-            <returns>The TaskParameter instance for chaining the call.</returns>
-            <param name="action">Action.</param>
-        </member>
-        <member name="M:FFImageLoading.Work.IWorkScheduler.Cancel(FFImageLoading.Work.IImageLoaderTask)">
-            <summary>      
-            Cancels any pending work for the task.        
-            </summary>        
-            <param name="task">Image loading task to cancel</param>
-        </member>
-        <member name="M:FFImageLoading.Work.IWorkScheduler.Cancel(System.Func{FFImageLoading.Work.IImageLoaderTask,System.Boolean})">
-            <summary>
-            Cancels tasks that match predicate.
-            </summary>
-            <param name="predicate">Predicate for finding relevant tasks to cancel.</param>
-        </member>
-        <member name="M:FFImageLoading.Work.IWorkScheduler.LoadImage(FFImageLoading.Work.IImageLoaderTask)">
-            <summary>      
-            Schedules the image loading. If image is found in cache then it returns it, otherwise it loads it.        
-            </summary>        
-            <param name="key">Key for cache lookup.</param>       
-            <param name="task">Image loading task.</param>
-        </member>
         <member name="T:FFImageLoading.Config.Configuration">
             <summary>
             Configuration.
@@ -222,30 +281,11 @@
             </summary>
             <value>The download cache.</value>
         </member>
-        <member name="P:FFImageLoading.Config.Configuration.DataResolverFactory">
-            <summary>
-            Gets or sets the image data resolver factory.
-            </summary>
-            <value>The data resolver factory.</value>
-        </member>
-        <member name="P:FFImageLoading.Config.Configuration.MD5Helper">
-            <summary>
-            Gets or sets the MD5 helper.
-            </summary>
-            <value>The MD5 helper.</value>
-        </member>
         <member name="P:FFImageLoading.Config.Configuration.LoadWithTransparencyChannel">
             <summary>
             Gets or sets a value indicating whether this <see cref="T:FFImageLoading.Config.Configuration"/> loads images with transparency channel. On Android we save 50% of the memory without transparency since we use 2 bytes per pixel instead of 4.
             </summary>
             <value><c>true</c> if FFIMageLoading loads images with transparency; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:FFImageLoading.Config.Configuration.BitmapOptimizations">
-            <summary>
-            Gets or sets a value indicating whether this <see cref="T:FFImageLoading.Config.Configuration"/> bitmap
-            memory optimizations.
-            </summary>
-            <value><c>true</c> if bitmap memory optimizations; otherwise, <c>false</c>.</value>
         </member>
         <member name="P:FFImageLoading.Config.Configuration.FadeAnimationEnabled">
             <summary>
@@ -326,33 +366,6 @@
             </summary>
             <value>The verbose logging.</value>
         </member>
-        <member name="P:FFImageLoading.Config.Configuration.SchedulerMaxParallelTasks">
-            <summary>
-            Gets or sets the scheduler max parallel tasks.
-            Default is: Math.Max(2, (int)(Environment.ProcessorCount / 2d))
-            </summary>
-            <value>The scheduler max parallel tasks.</value>
-        </member>
-        <member name="P:FFImageLoading.Config.Configuration.SchedulerMaxParallelTasksFactory">
-            <summary>
-            Gets or sets the scheduler max parallel tasks factory.
-            If null SchedulerMaxParallelTasks property is used
-            </summary>
-            <value>The scheduler max parallel tasks factory.</value>
-        </member>
-        <member name="P:FFImageLoading.Config.Configuration.DiskCacheDuration">
-            <summary>
-            Gets or sets the default duration of the disk cache entries.
-            </summary>
-            <value>The duration of the cache.</value>
-        </member>
-        <member name="P:FFImageLoading.Config.Configuration.ExecuteCallbacksOnUIThread">
-            <summary>
-            Gets or sets a value indicating whether callbacs (OnFinish, OnSuccess, etc) 
-            should execute on UI thread
-            </summary>
-            <value><c>true</c> if execute callbacks on UIT hread; otherwise, <c>false</c>.</value>
-        </member>
         <member name="M:FFImageLoading.Cache.IDiskCache.AddToSavingQueueIfNotExistsAsync(System.String,System.Byte[],System.TimeSpan)">
             <summary>
             Adds the file to cache and file saving queue if it does not exists.
@@ -416,12 +429,6 @@
             Sets a value indicating whether ImageService will exit tasks earlier
             </summary>
             <param name="exitTasksEarly">If set to <c>true</c> exit tasks early.</param>
-        </member>
-        <member name="P:FFImageLoading.IImageService.PauseWork">
-            <summary>
-            Gets a value indicating whether ImageService will pause tasks execution
-            </summary>
-            <value><c>true</c> if pause work; otherwise, <c>false</c>.</value>
         </member>
         <member name="M:FFImageLoading.IImageService.SetPauseWork(System.Boolean)">
             <summary>

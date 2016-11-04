@@ -5,8 +5,9 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:local="clr-namespace:PanicXamarinApp.CustomControls;assembly=PanicXamarinApp"
-             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+           
              >
+    <!--xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"-->
   <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" Padding="0,0,0,0" >
     <Grid  Padding="10,10,10,10">
       <Grid.RowDefinitions>
@@ -21,17 +22,20 @@
        <ActivityIndicator IsVisible="{Binding IsBusy}" WidthRequest="50" HeightRequest="50"  Color="Black" IsRunning="{Binding IsBusy}" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.2, AutoSize" />
        <StackLayout   Grid.Row="0" Grid.Column="0"  ></StackLayout>
        <StackLayout    Grid.Row="0" Grid.Column="1"  >        
-          <cv:CarouselView ItemsSource="{Binding Emergencys}" >
+          <!--<cv:CarouselView ItemsSource="{Binding Emergencys}" >
             <cv:CarouselView.ItemTemplate>
               <DataTemplate>
                 <Grid>
                   <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
-                  </Grid.RowDefinitions>      
-                    <!--LoadingPlaceholder="placeholderProfileImage.png"--><!--
-                  <ffimageloading:CachedImage x:Name="imgPanic" Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"
-                                              HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" DownsampleToViewSize="true"
+                  </Grid.RowDefinitions>-->      
+                    <!--LoadingPlaceholder="placeholderProfileImage.png"-->
+                 <Image   x:Name="imgPanic" Aspect="AspectFill" Source="Home_Emergency.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" 
+                                              HeightRequest="100" />
+                 <!--<ffimageloading:CachedImage x:Name="imgPanic" Grid.RowSpan="2" Aspect="AspectFill" Source="Home_Emergency.png"
+                                              HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" 
+                                              HeightRequest="100" DownsampleToViewSize="true"
                                              >
                     <ffimageloading:CachedImage.Transformations>
                       <fftransformations:CircleTransformation />
@@ -40,11 +44,11 @@
                   <!--<StackLayout Grid.Row="1" Padding="12" >
                     <Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
                   </StackLayout>-->
-                </Grid>
+                <!--</Grid>
               </DataTemplate>
             </cv:CarouselView.ItemTemplate>
-          </cv:CarouselView>      
-        <Label x:Name="lblStatus" IsVisible="false" />
+          </cv:CarouselView>-->      
+        <Label x:Name="lblStatus" />
        </StackLayout>
        <StackLayout  Grid.Row="0" Grid.Column="2"   ></StackLayout>
       <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  Orientation="Vertical" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"  >

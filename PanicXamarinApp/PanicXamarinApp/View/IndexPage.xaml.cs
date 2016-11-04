@@ -22,51 +22,52 @@ namespace PanicXamarinApp.View
             // Created  TapGestureRecognizer for panic button tapped event
             TapGestureRecognizer panicButtion = new TapGestureRecognizer();
             panicButtion.Tapped += PanicButtion_Tapped;
-           // imgPanic.GestureRecognizers.Add(panicButtion);         
+            imgPanic.GestureRecognizers.Add(panicButtion);         
         }    
 
         #region Events 
         private async void PanicButtion_Tapped(object sender, EventArgs e)
         {
-            try
-            {
-                _pageModel.IsBusy = true;
-                // Get the Latitude and Longitude of the Current User
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;
-                //  locator.AllowsBackgroundUpdates = true;
-                var position = await locator.GetPositionAsync(10000);
-                //  string status = "Position Status : " + position.Timestamp; ;
-                string status = " Latitude : " + position.Latitude;
-                status += ", Longitude : " + position.Longitude;
-                if (position != null)
-                {
-                    var test= GetDeviceUniqueId();
-                    if(Device.OS == TargetPlatform.Android)
-                    {
-                        status += ", IMEI : " + test.DeviceInformation.IMEI;
-                        status += ", PhoneNumber : " + test.DeviceInformation.PhoneNumber;
-                    }
-                    else if(Device.OS == TargetPlatform.iOS)
-                    {
-                        status += ", UniqueID : " + test.DeviceInformation.UniqueID;
-                        status += ", PhoneNumber : Apple can't shared phone number" ;
-                    }
-                  //  lblStatus.Text = status;
-                }
-                else
-                {
+            await Navigation.PushAsync(new SendPanicAlert());
+            //try
+            //{
+            //    _pageModel.IsBusy = true;
+            //    // Get the Latitude and Longitude of the Current User
+            //    var locator = CrossGeolocator.Current;
+            //    locator.DesiredAccuracy = 50;
+            //    //  locator.AllowsBackgroundUpdates = true;
+            //    var position = await locator.GetPositionAsync(10000);
+            //    //  string status = "Position Status : " + position.Timestamp; ;
+            //    string status = " Latitude : " + position.Latitude;
+            //    status += ", Longitude : " + position.Longitude;
+            //    if (position != null)
+            //    {
+            //        var test= GetDeviceUniqueId();
+            //        if(Device.OS == TargetPlatform.Android)
+            //        {
+            //            status += ", IMEI : " + test.DeviceInformation.IMEI;
+            //            status += ", PhoneNumber : " + test.DeviceInformation.PhoneNumber;
+            //        }
+            //        else if(Device.OS == TargetPlatform.iOS)
+            //        {
+            //            status += ", UniqueID : " + test.DeviceInformation.UniqueID;
+            //            status += ", PhoneNumber : Apple can't shared phone number" ;
+            //        }
+            //   //    lblStatus.Text = status;
+            //    }
+            //    else
+            //    {
 
-                }          
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
-            }
-            finally
-            {
-                _pageModel.IsBusy = false;
-            }
+            //    }          
+            //}
+            //catch (Exception ex)
+            //{
+            //    await DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
+            //}
+            //finally
+            //{
+            //    _pageModel.IsBusy = false;
+            //}
         }
 
         private async void BtnRegister_Clicked(object sender, EventArgs e)
