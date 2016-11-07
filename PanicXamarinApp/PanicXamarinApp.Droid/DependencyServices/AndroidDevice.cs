@@ -35,7 +35,7 @@ namespace PanicXamarinApp.Droid.DependencyService
                     info.DeviceInformation.PhoneNumber = IMEI_telManager.Line1Number;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
              
             }

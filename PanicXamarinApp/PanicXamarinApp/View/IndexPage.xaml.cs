@@ -28,56 +28,19 @@ namespace PanicXamarinApp.View
         #region Events 
         private async void PanicButtion_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SendPanicAlert());
-            //try
-            //{
-            //    _pageModel.IsBusy = true;
-            //    // Get the Latitude and Longitude of the Current User
-            //    var locator = CrossGeolocator.Current;
-            //    locator.DesiredAccuracy = 50;
-            //    //  locator.AllowsBackgroundUpdates = true;
-            //    var position = await locator.GetPositionAsync(10000);
-            //    //  string status = "Position Status : " + position.Timestamp; ;
-            //    string status = " Latitude : " + position.Latitude;
-            //    status += ", Longitude : " + position.Longitude;
-            //    if (position != null)
-            //    {
-            //        var test= GetDeviceUniqueId();
-            //        if(Device.OS == TargetPlatform.Android)
-            //        {
-            //            status += ", IMEI : " + test.DeviceInformation.IMEI;
-            //            status += ", PhoneNumber : " + test.DeviceInformation.PhoneNumber;
-            //        }
-            //        else if(Device.OS == TargetPlatform.iOS)
-            //        {
-            //            status += ", UniqueID : " + test.DeviceInformation.UniqueID;
-            //            status += ", PhoneNumber : Apple can't shared phone number" ;
-            //        }
-            //   //    lblStatus.Text = status;
-            //    }
-            //    else
-            //    {
-
-            //    }          
-            //}
-            //catch (Exception ex)
-            //{
-            //    await DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
-            //}
-            //finally
-            //{
-            //    _pageModel.IsBusy = false;
-            //}
+            await Navigation.PushAsync(new SendPanicAlert());           
         }
 
         private async void BtnRegister_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "We are working on...", "Okay");
+            await Navigation.PushAsync(new RegisterProfile());
+            //await DisplayAlert("Alert", "We are working on...", "Okay");
         }
 
         private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "We are working on...", "Okay");
+            // await DisplayAlert("Alert", "We are working on...", "Okay");
+            await Navigation.PushAsync(new LoginPage());
         }
 
         #endregion

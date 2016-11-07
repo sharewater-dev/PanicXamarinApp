@@ -107,6 +107,8 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"MvvmHelpers.dll",
 		"Plugin.CurrentActivity.dll",
+		"Plugin.DeviceInfo.Abstractions.dll",
+		"Plugin.DeviceInfo.dll",
 		"Plugin.Geolocator.Abstractions.dll",
 		"Plugin.Geolocator.dll",
 		"Plugin.Permissions.Abstractions.dll",

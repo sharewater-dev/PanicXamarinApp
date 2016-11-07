@@ -17,7 +17,7 @@ namespace PanicXamarinApp.iOS.DependencyServices
         {
             try
             {
-                var sqliteFilename = "TodoSQLite1.db3";
+                var sqliteFilename = "SQLite1.db3";
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
                 string libraryPath = Path.Combine(documentsPath, "..", "Library"); // Library folder
                 var path = Path.Combine(libraryPath, sqliteFilename);

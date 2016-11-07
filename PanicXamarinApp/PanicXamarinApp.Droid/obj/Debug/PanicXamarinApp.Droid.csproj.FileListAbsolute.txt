@@ -169,11 +169,10 @@ D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\ob
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.apk
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid-Signed.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid1.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid1-Signed.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.Forms.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.Forms.Droid.dll
@@ -183,6 +182,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\MvvmHelpers.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.CurrentActivity.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Geolocator.Abstractions.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Geolocator.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Permissions.Abstractions.dll
@@ -224,6 +225,12 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FormsViewGroup.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\MvvmHelpers.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.CurrentActivity.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.Abstractions.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.Abstractions.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.DeviceInfo.Abstractions.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Geolocator.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Geolocator.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Plugin.Geolocator.dll.mdb
@@ -246,9 +253,10 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\bin\PanicXamarinApp.Droid.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\bin\PanicXamarinApp.Droid1.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable-hdpi\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable-xhdpi\icon.png
@@ -301,6 +309,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\mscorlib.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\PanicXamarinApp.Droid.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Plugin.DeviceInfo.Abstractions.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Plugin.DeviceInfo.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Plugin.Geolocator.Abstractions.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Plugin.Geolocator.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll.mdb

@@ -1,11 +1,12 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\projects\steven\code\panicxamarinapp\panicxamarinapp\panicxamarinapp.winphone\obj\debug\intermediatexaml\panicxamarinapp.winphone.exe" HashGuid="2837d59f-02fd-4b79-ce65-1f4400f59296" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\panicxamarinapp\panicxamarinapp\bin\debug\panicxamarinapp.dll" HashGuid="d9a12ac0-baa3-f5cf-2de2-896b5b223adc" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="52b59dd3-49ca-beb7-ea1e-5100cbca4812" />
-    <ReferenceAssembly PathName="d:\projects\steven\code\panicxamarinapp\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="39a2c026-b4e0-6e41-04bc-58950ef1ecfd" />
+    <LocalAssembly PathName="d:\projects\steven\code\paniccoderepo\panicxamarinapp\panicxamarinapp.winphone\obj\debug\intermediatexaml\panicxamarinapp.winphone.exe" HashGuid="2837d59f-02fd-4b79-ce65-1f4400f59296" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\refractored.mvvmhelpers.1.1.0\lib\portable-net45+wp8+wpa81+win8+monoandroid10+monotouch10+xamarin.ios10+uap10\mvvmhelpers.dll" HashGuid="29054ac2-19b5-2d1f-1dc9-a9ac3c15e251" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\panicxamarinapp\panicxamarinapp\bin\debug\panicxamarinapp.dll" HashGuid="0368a9ba-d108-b62d-e41b-1fc42d74f2da" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.core.dll" HashGuid="2a418b72-55c1-19a8-a363-4b8c348fbee0" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.dll" HashGuid="bb4040f4-26bb-5883-795e-627e39855666" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.dll" HashGuid="068a3578-03d9-2580-f12e-c531e1d2d71c" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.platform.winrt.phone.dll" HashGuid="52b59dd3-49ca-beb7-ea1e-5100cbca4812" />
+    <ReferenceAssembly PathName="d:\projects\steven\code\paniccoderepo\packages\xamarin.forms.2.2.0.45\lib\wpa81\xamarin.forms.xaml.dll" HashGuid="39a2c026-b4e0-6e41-04bc-58950ef1ecfd" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

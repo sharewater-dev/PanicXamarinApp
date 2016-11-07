@@ -4,6 +4,7 @@ using PanicXamarinApp.EntityModel;
 using PanicXamarinApp.SQLite.SQLiteDataAccessLayer;
 using PanicXamarinApp.SQLite.SQLiteEntityLayer;
 using PanicXamarinApp.View;
+using Plugin.DeviceInfo;
 using Plugin.Geolocator;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace PanicXamarinApp.ViewModel
 {
     public class SendPanicAlertViewModel : BaseNavigationViewModel
     {
-        #region SQL-DB Entity private fields
+        #region SQL-DB Entity private fields       
         private Rescue _rescue = new Rescue();
         private Location _location = new Location();
+        private DeviceInfo _deviceInfo = new DeviceInfo();
+        
         #endregion
 
         #region Private Fields
@@ -27,6 +30,7 @@ namespace PanicXamarinApp.ViewModel
         private string _message2 = "SECONDS WITH YOUR LOCATION AND DETAILS";
         private string _textCancelButton = "Cancel";
         private SendPanicAlert view;
+        public bool _isequestCancel = false;
         #endregion
 
         #region Properties 
@@ -62,6 +66,14 @@ namespace PanicXamarinApp.ViewModel
             get { return _textCancelButton; }
             set { _textCancelButton = value; OnPropertyChanged("TextCancelButton"); }
         }
+        public bool IsRequestCancel
+        {
+            get { return _isequestCancel; }
+            set {
+                _isequestCancel = value;
+                OnPropertyChanged("IsequestCancel");
+            }
+        }
         #endregion
 
         #region Functions
@@ -77,75 +89,89 @@ namespace PanicXamarinApp.ViewModel
             while (SendLocationCounter > 0)
             {
                 await Task.Delay(1000);
-                SendLocationCounter = SendLocationCounter - 1;
+                SendLocationCounter = SendLocationCounter <= 0 ? 0: SendLocationCounter - 1;
             }
         }
         public async void GetCurrentLocation()
         {
             try
             {
-                await Task.Delay(10000);
+               await Task.Delay(3000);
                 // Get the Latitude and Longitude of the Current User
                 var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;
-                //  locator.AllowsBackgroundUpdates = true;
-                var position = await locator.GetPositionAsync(10000);
-                //  string status = "Position Status : " + position.Timestamp; ;
-                string status = " Latitude : " + position.Latitude;
-                status += ", Longitude : " + position.Longitude;
+                locator.DesiredAccuracy = 50;                    
+                var position = await locator.GetPositionAsync(100000);
+                             
                 if (position != null)
                 {
                     var test = GetDeviceUniqueId();
                     if (Device.OS == TargetPlatform.Android)
-                    {
-                        status += ", IMEI : " + test.DeviceInformation.IMEI;
-                        status += ", PhoneNumber : " + test.DeviceInformation.PhoneNumber;
+                    {                    
                         _rescue.MSISDN = test.DeviceInformation.PhoneNumber;
+                        _rescue.IMEI = test.DeviceInformation.IMEI;
                     }
                     else if (Device.OS == TargetPlatform.iOS)
-                    {
-                        status += ", UniqueID : " + test.DeviceInformation.UniqueID;
-                        status += ", PhoneNumber : Apple can't shared phone number";
+                    {                      
                         _rescue.MSISDN = "Apple can't shared phone number";
+                        _rescue.UniqueId = test.DeviceInformation.UniqueID;
                     }
-
                     _location.CreatedOn = System.DateTime.Now;
                     _location.Latitude = position.Latitude;
                     _location.Longitude = position.Longitude;
+
                     _location.Id = Guid.NewGuid();
-                     ResponseModel<Location> _TLocation=AddLocation();
-                    if(_TLocation != null && _TLocation.Status == true)
+                    ResponseModel<Location> _TLocation = AddLocation();
+                    if (_TLocation != null && _TLocation.Status == true && !IsRequestCancel)
                     {
                         _rescue.CreatedOn = System.DateTime.Now;
                         _rescue.LocationId = _location.Id;
                         _rescue.PriorityTypeId = Guid.NewGuid();
-                        ResponseModel<Rescue> _TRescue =SaveRescue();
-                        if(_TRescue != null && _TRescue.Status == true)
+                        if(GetDeviceInfo())
                         {
-                            Message1 = "YOUR PANIC ALERT HAS BEEN";
-                            Message2 = "WITH YOUR LOCATION. AN OPERATOR WILL CONTACT YOU SHORTLY.";
-                            TextCancelButton = "Back";
-                            //SendLocationCounter = "SENT";
+                            // _rescue.AppID = _deviceInfo.Id;
+                            _rescue.Model = _deviceInfo.Model;
+                            _rescue.Platform = _deviceInfo.Platform;
+                            _rescue.DeviceVersion = _deviceInfo.DVersion;
+                            _rescue.VersionNumber = _deviceInfo.VersionNumber;
+
+                            ResponseModel<Rescue> _TRescue = SaveRescue();
+                            if (_TRescue != null && _TRescue.Status == true)
+                            {
+                                Message1 = "YOUR PANIC ALERT HAS BEEN";
+                                Message2 = "WITH YOUR LOCATION. AN OPERATOR WILL CONTACT YOU SHORTLY.";
+                                TextCancelButton = "Back";
+                                SendLocationCounter = 0;
+                                await Task.Delay(1000);
+                                SendLocationCounter = "SENT";
+                                await view.DisplayAlert("Sucess!!", "Record has been successfully inserted.", "okay");
+                            }
+                            else
+                            {
+                                await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+                            }
                         }
                         else
                         {
                             await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
-                        }
-                    }                      
+                        }                        
+                    }
                     else
                     {
-                        await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+                        if(IsRequestCancel)                       
+                            await view.DisplayAlert("Alert!!", "You have been cancelled the request.", "okay");
+                        else
+                            await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
                     }
                 }
                 else
                 {
-
+                    await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
                 }
             }
             catch (Exception ex)
             {
                 await view.DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
-            }           
+            }
         }
 
         public UserDeviceModel GetDeviceUniqueId()
@@ -155,6 +181,23 @@ namespace PanicXamarinApp.ViewModel
             return deviceIdentifier;
         }
 
+        public bool GetDeviceInfo()
+        {
+            try
+            {
+                _deviceInfo.Id = CrossDeviceInfo.Current.Id;
+                _deviceInfo.Model = CrossDeviceInfo.Current.Model;
+                Plugin.DeviceInfo.Abstractions.Platform abc = CrossDeviceInfo.Current.Platform;
+                _deviceInfo.Platform = CrossDeviceInfo.Current.Platform.ToString();
+                _deviceInfo.DVersion = CrossDeviceInfo.Current.Version;
+                _deviceInfo.VersionNumber = CrossDeviceInfo.Current.VersionNumber.ToString();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }       
+        }
         #endregion
 
         #region SQL-DB Operation
@@ -166,7 +209,7 @@ namespace PanicXamarinApp.ViewModel
 
         public ResponseModel<Location> AddLocation()
         {
-            ResponseModel<Location> _TLocation= new LocationDAL().Add(_location);
+            ResponseModel<Location> _TLocation = new LocationDAL().Add(_location);
             return _TLocation;
         }
         #endregion

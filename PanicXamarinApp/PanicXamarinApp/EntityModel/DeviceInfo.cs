@@ -12,5 +12,11 @@ namespace PanicXamarinApp.EntityModel
         public string PhoneNumber { get; set; }
         public string UniqueID { get; set; }
 
+        public string Model { get; set; }
+        public string DVersion { get; set; }
+        public string Id { get; set; }
+        public string VersionNumber { get; set; }
+        public string Platform { get; set; }
+
     }
 }

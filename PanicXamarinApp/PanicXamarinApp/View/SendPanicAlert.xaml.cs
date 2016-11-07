@@ -1,30 +1,26 @@
-﻿using PanicXamarinApp.SQLite.SQLiteEntityLayer;
-using PanicXamarinApp.ViewModel;
+﻿using PanicXamarinApp.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace PanicXamarinApp.View
 {
     public partial class SendPanicAlert : ContentPage
     {
-
+        SendPanicAlertViewModel _sendPanicAlertViewModel;
         public SendPanicAlert()
         {
             InitializeComponent();
-            SendPanicAlertViewModel _sendPanicAlertViewModel = new SendPanicAlertViewModel(this);
+            _sendPanicAlertViewModel = new SendPanicAlertViewModel(this);
             BindingContext = _sendPanicAlertViewModel;
-            Utility _utility = new Utility();
-            _utility.CreateDatabase();
+            //Utility _utility = new Utility();
+            //_utility.CreateDatabase();
+          
         }
 
         #region Events
         private void BtnCancel_Clicked(object sender, EventArgs e)
         {
+            _sendPanicAlertViewModel.IsRequestCancel = true;
             Navigation.PopAsync();
         }
         #endregion

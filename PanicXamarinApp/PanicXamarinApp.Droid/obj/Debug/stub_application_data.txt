@@ -1,2 +1,2 @@
 android.app.Application
-PanicXamarinApp.Droid
+PanicXamarinApp.Droid1

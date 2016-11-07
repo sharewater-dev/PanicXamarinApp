@@ -24,13 +24,24 @@ namespace PanicXamarinApp.Droid.DependencyServices
         {
             try
             {
-                var sqliteFilename = "TodoSQLite.db3";
-                string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
-                string libraryPath = Path.Combine(documentsPath, "..", "Library"); // Library folder
-                var path = Path.Combine(libraryPath, sqliteFilename);
-                // Create the connection
-                var conn = new SQLiteConnection(path);
+                var sqliteFilename = "SQLite1.db3";                //string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
+                //string libraryPath = Path.Combine(documentsPath, "..", "Library"); // Library folder
+                //var path = Path.Combine(libraryPath, sqliteFilename);
+
+
+                //var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                //path = Path.Combine(path, sqliteFilename);
+                //// Create the connection
+                //var conn = new SQLiteConnection(path);
                 // Return the database connection
+
+
+             //   var dbName = "CustomersDb.db3";
+                var path = Path.Combine(System.Environment.
+                  GetFolderPath(System.Environment.
+                  SpecialFolder.Personal), sqliteFilename);
+             //   return new SQLiteConnection(path);
+                var conn = new SQLiteConnection(path);
                 return conn;
 
             }

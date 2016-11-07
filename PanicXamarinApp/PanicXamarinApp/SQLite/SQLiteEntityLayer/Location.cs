@@ -10,7 +10,7 @@ namespace PanicXamarinApp.SQLite.SQLiteEntityLayer
     public class Location : BaseEntity
     {
         [PrimaryKey]
-        [AutoIncrement]
+        [AutoIncrement]    
         public Guid Id { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PanicXamarinApp.View.RegisterProfile"
+             xmlns:local="clr-namespace:PanicXamarinApp.CustomControls;assembly=PanicXamarinApp"
+            Title="REGISTER A PROFILE ON YOUR DEVICE"
+             >
+  <StackLayout   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" Padding="0,0,0,0" >
+    <Grid  Padding="10,10,10,10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="7*" />
+        <RowDefinition Height="1*" />
+        <RowDefinition Height="2*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3.33*" />
+        <ColumnDefinition Width="3.33*" />
+        <ColumnDefinition Width="3.33*" />
+      </Grid.ColumnDefinitions>
+      <ScrollView Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3" >
+        <StackLayout   VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
+          <Label Text="ONLY SENT IN CASE OF PANIC"  TextColor="Red" FontSize="14"  ></Label>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="NAME SURNAME"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL"   ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE MODEL"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE COLOR"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE REGISTRATION"  ></Entry>
+          <Label Text="* OPTIONAL INFO TO IMPROVE RESPONSE"  TextColor="Red" FontSize="10"  ></Label>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD"  IsPassword="True" ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="CONFIRM PASSWORD"  IsPassword="True" ></Entry>
+        </StackLayout>
+      </ScrollView>
+      <StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
+        <Label Text="INSURED BYAABS" TextColor="Black" Font="14" />
+      </StackLayout>
+    
+        <!--Start : Button : Submit-->
+        <local:NativeButton x:Name="btnSubmit" Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                           FontSize="14" TextColor="Black" Text="SUBMIT"  HorizontalOptions="Center" Clicked="BtnSubmit_Clicked"  >
+          <local:NativeButton.BorderRadius>
+            <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+          </local:NativeButton.BorderRadius>
+          <local:NativeButton.WidthRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+          </local:NativeButton.WidthRequest>
+        </local:NativeButton>
+        <!--End : Button : Submit-->
+
+        <!--Start : Button : ADD ICE-->
+        <local:NativeButton x:Name="btnAddICE" Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                           FontSize="14" TextColor="Black" Text="ADD ICE"  HorizontalOptions="Center" Clicked="BtnAddICE_Clicked"  >
+          <local:NativeButton.BorderRadius>
+            <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+          </local:NativeButton.BorderRadius>
+          <local:NativeButton.WidthRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+          </local:NativeButton.WidthRequest>
+        </local:NativeButton>
+        <!--End : Button : ADD ICE-->
+
+        <!--Start : Button : Back-->
+        <local:NativeButton x:Name="btnBack" Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                           FontSize="14" TextColor="Black" Text="BACK"  HorizontalOptions="Center" Clicked="BtnBack_Clicked"  >
+          <local:NativeButton.BorderRadius>
+            <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+          </local:NativeButton.BorderRadius>
+          <local:NativeButton.WidthRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+          </local:NativeButton.WidthRequest>
+        </local:NativeButton>
+        <!--End : Button : Back-->
+
+   
+    </Grid>
+  </StackLayout>
+</ContentPage>
