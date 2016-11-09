@@ -6,6 +6,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\FFImageLoading.Transformations.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\FormsViewGroup.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\MvvmHelpers.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Plugin.Connectivity.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Plugin.Connectivity.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Plugin.CurrentActivity.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Plugin.DeviceInfo.Abstractions.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Plugin.DeviceInfo.dll

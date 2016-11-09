@@ -7,11 +7,12 @@ using PanicXamarinApp.View;
 using Plugin.DeviceInfo;
 using Plugin.Geolocator;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Plugin.Connectivity;
+using Android;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace PanicXamarinApp.ViewModel
 {
@@ -21,16 +22,17 @@ namespace PanicXamarinApp.ViewModel
         private Rescue _rescue = new Rescue();
         private Location _location = new Location();
         private DeviceInfo _deviceInfo = new DeviceInfo();
-        
+
         #endregion
 
         #region Private Fields
-        private dynamic _sendLocationCounter = 10;
+        private dynamic _sendLocationCounter = 180;
         private string _message1 = "A PANIC ALERT WILL BE SENT IN";
         private string _message2 = "SECONDS WITH YOUR LOCATION AND DETAILS";
         private string _textCancelButton = "Cancel";
-        private SendPanicAlert view;
+        private SendPanicAlert view;     
         public bool _isequestCancel = false;
+        UserDeviceModel deviceIdentifier;
         #endregion
 
         #region Properties 
@@ -69,7 +71,8 @@ namespace PanicXamarinApp.ViewModel
         public bool IsRequestCancel
         {
             get { return _isequestCancel; }
-            set {
+            set
+            {
                 _isequestCancel = value;
                 OnPropertyChanged("IsequestCancel");
             }
@@ -81,7 +84,7 @@ namespace PanicXamarinApp.ViewModel
         {
             this.view = view;
             StartCounter();
-            GetCurrentLocation();
+            DetectRescueRequest();
         }
 
         public async void StartCounter()
@@ -89,96 +92,161 @@ namespace PanicXamarinApp.ViewModel
             while (SendLocationCounter > 0)
             {
                 await Task.Delay(1000);
-                SendLocationCounter = SendLocationCounter <= 0 ? 0: SendLocationCounter - 1;
+                SendLocationCounter = SendLocationCounter <= 0 ? 0 : SendLocationCounter - 1;
             }
         }
-        public async void GetCurrentLocation()
+        public async void DetectRescueRequest()
         {
             try
             {
-               await Task.Delay(3000);
+                await Task.Delay(3000);
                 // Get the Latitude and Longitude of the Current User
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;                    
-                var position = await locator.GetPositionAsync(100000);
-                             
-                if (position != null)
+                if (CrossConnectivity.Current.IsConnected)
                 {
-                    var test = GetDeviceUniqueId();
-                    if (Device.OS == TargetPlatform.Android)
-                    {                    
-                        _rescue.MSISDN = test.DeviceInformation.PhoneNumber;
-                        _rescue.IMEI = test.DeviceInformation.IMEI;
-                    }
-                    else if (Device.OS == TargetPlatform.iOS)
-                    {                      
-                        _rescue.MSISDN = "Apple can't shared phone number";
-                        _rescue.UniqueId = test.DeviceInformation.UniqueID;
-                    }
-                    _location.CreatedOn = System.DateTime.Now;
-                    _location.Latitude = position.Latitude;
-                    _location.Longitude = position.Longitude;
-
-                    _location.Id = Guid.NewGuid();
-                    ResponseModel<Location> _TLocation = AddLocation();
-                    if (_TLocation != null && _TLocation.Status == true && !IsRequestCancel)
+                    var locationPermissionStatus = PermissionStatus.Unknown;
+                    locationPermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
+                    if (locationPermissionStatus == PermissionStatus.Granted) //This always return Granted even if i explicitly revoke from device
                     {
-                        _rescue.CreatedOn = System.DateTime.Now;
-                        _rescue.LocationId = _location.Id;
-                        _rescue.PriorityTypeId = Guid.NewGuid();
-                        if(GetDeviceInfo())
+                        DetectLocationAndDeviceInfo();
+                    }
+                    else 
+                    {                   
+                        var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Location);
+                        locationPermissionStatus = results[Permission.Location];
+                        if (locationPermissionStatus == PermissionStatus.Granted)
                         {
-                            // _rescue.AppID = _deviceInfo.Id;
-                            _rescue.Model = _deviceInfo.Model;
-                            _rescue.Platform = _deviceInfo.Platform;
-                            _rescue.DeviceVersion = _deviceInfo.DVersion;
-                            _rescue.VersionNumber = _deviceInfo.VersionNumber;
-
-                            ResponseModel<Rescue> _TRescue = SaveRescue();
-                            if (_TRescue != null && _TRescue.Status == true)
-                            {
-                                Message1 = "YOUR PANIC ALERT HAS BEEN";
-                                Message2 = "WITH YOUR LOCATION. AN OPERATOR WILL CONTACT YOU SHORTLY.";
-                                TextCancelButton = "Back";
-                                SendLocationCounter = 0;
-                                await Task.Delay(1000);
-                                SendLocationCounter = "SENT";
-                                await view.DisplayAlert("Sucess!!", "Record has been successfully inserted.", "okay");
-                            }
-                            else
-                            {
-                                await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
-                            }
+                            DetectLocationAndDeviceInfo();
                         }
-                        else
-                        {
-                            await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
-                        }                        
-                    }
-                    else
-                    {
-                        if(IsRequestCancel)                       
-                            await view.DisplayAlert("Alert!!", "You have been cancelled the request.", "okay");
-                        else
-                            await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
-                    }
+                    }                 
                 }
                 else
                 {
-                    await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+                    await view.DisplayAlert("Error!!", "Internet connectivity is not detected.", "okay");
+                    await view.Navigation.PopAsync();
                 }
             }
+
             catch (Exception ex)
             {
                 await view.DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
             }
+
+        }     
+
+        public async void DetectLocationAndDeviceInfo()
+        {
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 10;
+            var position = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
+            if (position != null)
+            {               
+                _location.CreatedOn = System.DateTime.Now;
+                _location.Latitude = position.Latitude;
+                _location.Longitude = position.Longitude;
+                var PhonePermissionStatus = PermissionStatus.Unknown;
+                PhonePermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+
+                if (PhonePermissionStatus == PermissionStatus.Granted)
+                {
+                    IDevice device = DependencyService.Get<IDevice>();
+                    deviceIdentifier = device.GetIdentifier(0);
+                    SaveRescueRequest();
+                }
+                else
+                {
+                    var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Phone);
+                    PhonePermissionStatus = results[Permission.Phone];
+                    if (PhonePermissionStatus == PermissionStatus.Granted)
+                    {
+                        IDevice device = DependencyService.Get<IDevice>();
+                        deviceIdentifier = device.GetIdentifier(0);
+                        SaveRescueRequest();
+                    }
+                }
+            }
+            else
+            {
+                await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+            }
         }
 
-        public UserDeviceModel GetDeviceUniqueId()
+        public async void SaveRescueRequest()
         {
-            IDevice device = DependencyService.Get<IDevice>();
-            UserDeviceModel deviceIdentifier = device.GetIdentifier(0);
-            return deviceIdentifier;
+            if (deviceIdentifier != null)
+            {
+                if (Device.OS == TargetPlatform.Android)
+                {
+                    _rescue.MSISDN = deviceIdentifier.DeviceInformation.PhoneNumber;
+                    _rescue.IMEI = deviceIdentifier.DeviceInformation.IMEI;
+                }
+                else if (Device.OS == TargetPlatform.iOS)
+                {
+                    _rescue.MSISDN = "Apple can't shared phone number";
+                    _rescue.UniqueId = deviceIdentifier.DeviceInformation.UniqueID;
+                }          
+
+                _location.Id = Guid.NewGuid();
+                ResponseModel<Location> _TLocation = AddLocation();
+                if (_TLocation != null && _TLocation.Status == true && !IsRequestCancel)
+                {
+                    _rescue.CreatedOn = System.DateTime.Now;
+                    _rescue.LocationId = _location.Id;
+                    _rescue.PriorityTypeId = Guid.NewGuid();
+                    if (GetDeviceInfo())
+                    {
+                        // _rescue.AppID = _deviceInfo.Id;
+                        _rescue.Model = _deviceInfo.Model;
+                        _rescue.Platform = _deviceInfo.Platform;
+                        _rescue.DeviceVersion = _deviceInfo.DVersion;
+                        _rescue.VersionNumber = _deviceInfo.VersionNumber;
+
+                        ResponseModel<Rescue> _TRescue = SaveRescue();
+                        if (_TRescue != null && _TRescue.Status == true)
+                        {
+                            Message1 = "YOUR PANIC ALERT HAS BEEN";
+                            Message2 = "WITH YOUR LOCATION. AN OPERATOR WILL CONTACT YOU SHORTLY.";
+                            TextCancelButton = "Back";
+                            SendLocationCounter = 0;
+                            await Task.Delay(1000);
+                            SendLocationCounter = "SENT";
+                            await view.DisplayAlert("Sucess!!", "Record has been successfully inserted.", "okay");
+                            await view.DisplayAlert("Location ", "Latitude : " + _location.Latitude + "\n  Longitude :" + _location.Longitude, "Okay");
+
+                            if (Device.OS == TargetPlatform.Android)
+                            {
+                                await view.DisplayAlert("Phone Number ", "Phone Number : " + _rescue.MSISDN + "\n  IMEI :" + _rescue.IMEI, "Okay");
+                            }
+                            else if (Device.OS == TargetPlatform.iOS)
+                            {
+                                await view.DisplayAlert("Phone Number ", "Phone Number : " + _rescue.MSISDN + "\n  IMEI : Apple not sharing IMEI Number" + "\n  UniqueId :" + _rescue.UniqueId, "Okay");
+                            }
+                            _rescue.Model = _deviceInfo.Model;
+                            _rescue.Platform = _deviceInfo.Platform;
+                            _rescue.DeviceVersion = _deviceInfo.DVersion;
+                            _rescue.VersionNumber = _deviceInfo.VersionNumber;
+                            await view.DisplayAlert("Device Info", " Model : " + _rescue.Model + " \n Platform : " + _rescue.Platform + "\n DeviceVersion : " + _rescue.DeviceVersion + "\n VersionNumber : " + _rescue.VersionNumber, "Okay");
+                        }
+                        else
+                        {
+                            SendLocationCounter = 2;
+                            await view.DisplayAlert("Alert!!", "Request is not completed. Please try again", "okay");
+                        }
+                    }
+                    else
+                    {
+                        SendLocationCounter = 2;
+                        await view.DisplayAlert("Alert!!", "Request is not completed. Please try again", "okay");
+                    }
+                }
+                else
+                {
+                    SendLocationCounter = 2;
+                    if (IsRequestCancel)
+                        await view.DisplayAlert("Alert!!", "You have been cancelled the request.", "okay");
+                    else
+                        await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+                }
+            }
         }
 
         public bool GetDeviceInfo()
@@ -191,12 +259,18 @@ namespace PanicXamarinApp.ViewModel
                 _deviceInfo.Platform = CrossDeviceInfo.Current.Platform.ToString();
                 _deviceInfo.DVersion = CrossDeviceInfo.Current.Version;
                 _deviceInfo.VersionNumber = CrossDeviceInfo.Current.VersionNumber.ToString();
+
+
+                Label test1 = new Label { Text = "Generated AppId: " + CrossDeviceInfo.Current.GenerateAppId() };
+                Label test2 = new Label { Text = "Generated AppId: " + CrossDeviceInfo.Current.GenerateAppId(true) };
+                Label test3 = new Label { Text = "Generated AppId: " + CrossDeviceInfo.Current.GenerateAppId(true, "hello") };
+                Label test4 = new Label { Text = "Generated AppId: " + CrossDeviceInfo.Current.GenerateAppId(true, "hello", "world") };
                 return true;
             }
             catch (Exception ex)
             {
                 return false;
-            }       
+            }
         }
         #endregion
 

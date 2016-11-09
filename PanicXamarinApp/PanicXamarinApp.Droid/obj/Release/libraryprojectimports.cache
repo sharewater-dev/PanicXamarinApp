@@ -5,6 +5,7 @@
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Platform\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Transformations\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.CurrentActivity\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.DeviceInfo\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.Geolocator\library_project_imports\res</ResolvedResourceDirectory>
@@ -20,6 +21,7 @@
     <ResolvedAssetDirectory>obj\Release\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\FFImageLoading.Platform\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\FFImageLoading.Transformations\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Release\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\Plugin.CurrentActivity\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\Plugin.DeviceInfo\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Release\__library_projects__\Plugin.Geolocator\library_project_imports\assets</ResolvedAssetDirectory>
@@ -36,6 +38,7 @@
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Platform.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\FFImageLoading.Transformations.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.DeviceInfo.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\__library_projects__\Plugin.Geolocator.stamp</ResolvedResourceDirectoryStamp>

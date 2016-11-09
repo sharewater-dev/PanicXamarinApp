@@ -1,6 +1,8 @@
-﻿using PanicXamarinApp.ViewModel;
+﻿using PanicXamarinApp.SQLite.SQLiteEntityLayer;
+using PanicXamarinApp.ViewModel;
 using System;
 using Xamarin.Forms;
+
 
 namespace PanicXamarinApp.View
 {
@@ -12,9 +14,9 @@ namespace PanicXamarinApp.View
             InitializeComponent();
             _sendPanicAlertViewModel = new SendPanicAlertViewModel(this);
             BindingContext = _sendPanicAlertViewModel;
-            //Utility _utility = new Utility();
-            //_utility.CreateDatabase();
-          
+            Utility _utility = new Utility();
+            _utility.CreateDatabase();
+
         }
 
         #region Events

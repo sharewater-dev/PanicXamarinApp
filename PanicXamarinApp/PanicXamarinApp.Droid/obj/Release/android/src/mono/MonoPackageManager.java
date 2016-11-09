@@ -106,6 +106,8 @@ class MonoPackageManager_Resources {
 		"FFImageLoading.Transformations.dll",
 		"FormsViewGroup.dll",
 		"MvvmHelpers.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.DeviceInfo.Abstractions.dll",
 		"Plugin.DeviceInfo.dll",

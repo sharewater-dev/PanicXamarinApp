@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PanicXamarinApp.View.LoginPage"
              xmlns:local="clr-namespace:PanicXamarinApp.CustomControls;assembly=PanicXamarinApp"
-
+Title="Login Page"
              >
   <StackLayout   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" Padding="0,0,0,0" >
     <Grid  Padding="10,10,10,10">

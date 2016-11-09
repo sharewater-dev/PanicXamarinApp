@@ -32,8 +32,9 @@ namespace PanicXamarinApp.Droid.DependencyService
                 if (IMEI_telManager != null)
                 {
                     info.DeviceInformation.IMEI = IMEI_telManager.GetDeviceId(simSlot);
+                   // String getSimSerialNumber = IMEI_telManager.SimSerialNumber;
                     info.DeviceInformation.PhoneNumber = IMEI_telManager.Line1Number;
-                }
+                }               
             }
             catch (Exception ex)
             {

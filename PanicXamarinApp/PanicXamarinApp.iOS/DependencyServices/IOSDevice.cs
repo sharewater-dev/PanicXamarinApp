@@ -19,7 +19,6 @@ namespace PanicXamarinApp.iOS.DependencyServices
             UserDeviceModel info = new UserDeviceModel();
             try
             {
-
                 var UniqueID = UIDevice.CurrentDevice.IdentifierForVendor;
                 if (UniqueID != null)
                     info.DeviceInformation.UniqueID = UniqueID.Description;

@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 using FFImageLoading.Forms.Touch;
+using Plugin.Permissions.Abstractions;
 
 namespace PanicXamarinApp.iOS
 {
@@ -29,5 +30,6 @@ namespace PanicXamarinApp.iOS
 
             return base.FinishedLaunching(app, options);
         }
+      
     }
 }

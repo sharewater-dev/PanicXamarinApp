@@ -1,7 +1,7 @@
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid1.apk
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid1-Signed.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid2.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.Droid2-Signed.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FFImageLoading.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FFImageLoading.Forms.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FFImageLoading.Forms.Droid.dll
@@ -10,6 +10,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FormsViewGroup.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\MvvmHelpers.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\PanicXamarinApp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.CurrentActivity.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.DeviceInfo.Abstractions.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.DeviceInfo.dll
@@ -53,6 +55,12 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FormsViewGroup.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\FormsViewGroup.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\MvvmHelpers.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.Abstractions.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.Abstractions.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.Connectivity.Abstractions.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.CurrentActivity.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.DeviceInfo.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Release\Plugin.DeviceInfo.xml
@@ -85,7 +93,7 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\PanicXamarinApp.Droid.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\PanicXamarinApp.Droid.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\bin\PanicXamarinApp.Droid1.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\bin\PanicXamarinApp.Droid2.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\res\drawable\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\res\drawable-hdpi\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\res\drawable-xhdpi\icon.png

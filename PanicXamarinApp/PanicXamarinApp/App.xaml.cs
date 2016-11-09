@@ -1,4 +1,5 @@
 ﻿using PanicXamarinApp.View;
+using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,6 @@ namespace PanicXamarinApp
         protected override void OnResume()
         {
             // Handle when your app resumes
-        }
+        }       
     }
 }

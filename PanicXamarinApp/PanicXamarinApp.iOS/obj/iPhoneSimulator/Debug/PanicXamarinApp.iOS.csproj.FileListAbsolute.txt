@@ -106,6 +106,14 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iP
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.DeviceInfo.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.DeviceInfo.Abstractions.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.DeviceInfo.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Connectivity.Abstractions.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.Abstractions.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\obj\iPhoneSimulator\Debug\PanicXamarinApp.iOS.exe.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.iOS\bin\iPhoneSimulator\Debug\PanicXamarinApp.iOS.exe.mdb
