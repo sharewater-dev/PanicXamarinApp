@@ -15,24 +15,9 @@ namespace PanicXamarinApp.View
         public RegisterProfile()
         {
             InitializeComponent();
-            _registerProfileViewModel = new RegisterProfileViewModel();    
+            _registerProfileViewModel = new RegisterProfileViewModel(this);
+            BindingContext = _registerProfileViewModel;
         }
-
-        #region Events
-        private void BtnAddICE_Clicked(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void BtnBack_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PopAsync();
-        }
-
-        private void BtnSubmit_Clicked(object sender, EventArgs e)
-        {
-           
-        }
-        #endregion
+       
     }
 }

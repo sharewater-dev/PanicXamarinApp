@@ -10,9 +10,12 @@ namespace PanicXamarinApp.View
 {
     public partial class LoginPage : ContentPage
     {
+        LoginPageViewModel viewModel;
         public LoginPage()
         {
-            InitializeComponent();        
+            InitializeComponent();
+            viewModel = new LoginPageViewModel(this);
+            BindingContext = viewModel;     
         }
     }
 }

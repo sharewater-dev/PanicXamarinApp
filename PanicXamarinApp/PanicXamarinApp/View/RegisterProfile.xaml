@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PanicXamarinApp.View.RegisterProfile"
@@ -20,14 +20,18 @@
       <ScrollView Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3" >
         <StackLayout   VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
           <Label Text="ONLY SENT IN CASE OF PANIC"  TextColor="Red" FontSize="14"  ></Label>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="NAME SURNAME"  ></Entry>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL"   ></Entry>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE MODEL"  ></Entry>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE COLOR"  ></Entry>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE REGISTRATION"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="NAME SURNAME" Text="{Binding Name }" ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL"  Text="{Binding Email }"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE MODEL"  Text="{Binding VehicleModel }" ></Entry>
+          <Label Text="{Binding Val_vehicleModel}" TextColor="Red" />
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE COLOR" Text="{Binding VehicleColor }"  ></Entry>
+          <Label Text="{Binding V_vehicleColor}" TextColor="Red" />
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="VEHICLE REGISTRATION"  Text="{Binding VehicleRegistation }" ></Entry>
+          <Label Text="{Binding V_vehicleRegistation}" TextColor="Red" />
+          
           <Label Text="* OPTIONAL INFO TO IMPROVE RESPONSE"  TextColor="Red" FontSize="10"  ></Label>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD"  IsPassword="True" ></Entry>
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="CONFIRM PASSWORD"  IsPassword="True" ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD"  IsPassword="True" Text="{Binding Password }" ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="CONFIRM PASSWORD"  IsPassword="True" Text="{Binding ConfirmPassword }" ></Entry>
         </StackLayout>
       </ScrollView>
       <StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
@@ -36,8 +40,7 @@
     
         <!--Start : Button : Submit-->
         <local:NativeButton x:Name="btnSubmit" Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                           FontSize="14" TextColor="Black" Text="SUBMIT"  HorizontalOptions="Center" Clicked="BtnSubmit_Clicked"  >
-          <local:NativeButton.BorderRadius>
+                           FontSize="14" TextColor="Black" Text="SUBMIT"  HorizontalOptions="Center" Command="{Binding SubmitCommand}"  > <local:NativeButton.BorderRadius>
             <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
           </local:NativeButton.BorderRadius>
           <local:NativeButton.WidthRequest>
@@ -48,7 +51,7 @@
 
         <!--Start : Button : ADD ICE-->
         <local:NativeButton x:Name="btnAddICE" Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                           FontSize="14" TextColor="Black" Text="ADD ICE"  HorizontalOptions="Center" Clicked="BtnAddICE_Clicked"  >
+                           FontSize="14" TextColor="Black" Text="ADD ICE"  HorizontalOptions="Center" Command="{Binding AddICECommand}"   >
           <local:NativeButton.BorderRadius>
             <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
           </local:NativeButton.BorderRadius>
@@ -60,7 +63,7 @@
 
         <!--Start : Button : Back-->
         <local:NativeButton x:Name="btnBack" Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                           FontSize="14" TextColor="Black" Text="BACK"  HorizontalOptions="Center" Clicked="BtnBack_Clicked"  >
+                           FontSize="14" TextColor="Black" Text="BACK"  HorizontalOptions="Center" Command="{Binding BackCommand}"  >
           <local:NativeButton.BorderRadius>
             <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
           </local:NativeButton.BorderRadius>

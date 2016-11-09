@@ -34,6 +34,7 @@ namespace PanicXamarinApp.SQLite.SQLiteEntityLayer
                 database.CreateTable<Location>();
                 database.CreateTable<PriorityTypes>();
                 database.CreateTable<Rescue>();
+                database.CreateTable<UserProfile>();
             }
             catch (Exception ex)
             {

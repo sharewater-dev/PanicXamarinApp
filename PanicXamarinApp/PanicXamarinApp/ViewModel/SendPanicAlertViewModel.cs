@@ -135,38 +135,45 @@ namespace PanicXamarinApp.ViewModel
 
         public async void DetectLocationAndDeviceInfo()
         {
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 10;
-            var position = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
-            if (position != null)
-            {               
-                _location.CreatedOn = System.DateTime.Now;
-                _location.Latitude = position.Latitude;
-                _location.Longitude = position.Longitude;
-                var PhonePermissionStatus = PermissionStatus.Unknown;
-                PhonePermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 10;
+                var position = await locator.GetPositionAsync(timeoutMilliseconds: 10000);
+                if (position != null)
+                {
+                    _location.CreatedOn = System.DateTime.Now;
+                    _location.Latitude = position.Latitude;
+                    _location.Longitude = position.Longitude;
+                    var PhonePermissionStatus = PermissionStatus.Unknown;
+                    PhonePermissionStatus = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
 
-                if (PhonePermissionStatus == PermissionStatus.Granted)
-                {
-                    IDevice device = DependencyService.Get<IDevice>();
-                    deviceIdentifier = device.GetIdentifier(0);
-                    SaveRescueRequest();
-                }
-                else
-                {
-                    var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Phone);
-                    PhonePermissionStatus = results[Permission.Phone];
                     if (PhonePermissionStatus == PermissionStatus.Granted)
                     {
                         IDevice device = DependencyService.Get<IDevice>();
                         deviceIdentifier = device.GetIdentifier(0);
                         SaveRescueRequest();
                     }
+                    else
+                    {
+                        var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Phone);
+                        PhonePermissionStatus = results[Permission.Phone];
+                        if (PhonePermissionStatus == PermissionStatus.Granted)
+                        {
+                            IDevice device = DependencyService.Get<IDevice>();
+                            deviceIdentifier = device.GetIdentifier(0);
+                            SaveRescueRequest();
+                        }
+                    }
+                }
+                else
+                {
+                    await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
+                await view.DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again", "okay");
             }
         }
 

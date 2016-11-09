@@ -13,10 +13,7 @@ namespace PanicXamarinApp.View
         {
             InitializeComponent();
             _sendPanicAlertViewModel = new SendPanicAlertViewModel(this);
-            BindingContext = _sendPanicAlertViewModel;
-            Utility _utility = new Utility();
-            _utility.CreateDatabase();
-
+            BindingContext = _sendPanicAlertViewModel;         
         }
 
         #region Events

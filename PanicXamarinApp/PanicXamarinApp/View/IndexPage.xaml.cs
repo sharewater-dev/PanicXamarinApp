@@ -1,5 +1,6 @@
 ﻿using PanicXamarinApp.DependencyServices;
 using PanicXamarinApp.EntityModel;
+using PanicXamarinApp.SQLite.SQLiteEntityLayer;
 using PanicXamarinApp.ViewModel;
 using Plugin.Geolocator;
 using System;
@@ -22,7 +23,10 @@ namespace PanicXamarinApp.View
             // Created  TapGestureRecognizer for panic button tapped event
             TapGestureRecognizer panicButtion = new TapGestureRecognizer();
             panicButtion.Tapped += PanicButtion_Tapped;
-            imgPanic.GestureRecognizers.Add(panicButtion);         
+            imgPanic.GestureRecognizers.Add(panicButtion);
+
+            Utility _utility = new Utility();
+            _utility.CreateDatabase();
         }    
 
         #region Events 

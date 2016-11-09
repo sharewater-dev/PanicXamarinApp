@@ -19,11 +19,11 @@ Title="Login Page"
         <ColumnDefinition Width="2.5*" />
       </Grid.ColumnDefinitions>
       <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL ADDRESS"  ></Entry>
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD" IsPassword="True"  ></Entry>
+        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL ADDRESS" Text="{Binding Email}"  ></Entry>
+        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD" IsPassword="True"  Text="{Binding Password}" ></Entry>
         <!--Start : Button : Login-->
         <local:NativeButton x:Name="btnLogin" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                           FontSize="14" TextColor="Black" Text="LOG IN"  HorizontalOptions="Center"  >
+                           FontSize="14" TextColor="Black" Text="LOG IN"  HorizontalOptions="Center" Command="{Binding LoginButton}"   >
           <local:NativeButton.BorderRadius>
             <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
           </local:NativeButton.BorderRadius>
@@ -33,9 +33,9 @@ Title="Login Page"
         </local:NativeButton>
         <!--End : Button : Login-->
 
-          <!--Start : Button : Forgot Username or Password-->
+        <!--Start : Button : Forgot Username or Password-->
         <local:NativeButton x:Name="btnForgotUserNamePassword" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                           FontSize="10" TextColor="Black" Text="FORGOT USERNAME OR PASSWORD"  HorizontalOptions="Center"  >
+                           FontSize="10" TextColor="Black" Text="FORGOT USERNAME OR PASSWORD"  HorizontalOptions="Center" Command="{Binding ForgotPasswordButton}"  >
           <local:NativeButton.BorderRadius>
             <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
           </local:NativeButton.BorderRadius>
