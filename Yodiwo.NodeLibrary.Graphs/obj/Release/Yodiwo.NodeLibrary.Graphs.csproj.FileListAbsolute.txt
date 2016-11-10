@@ -1,0 +1,17 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.NodeLibrary.Graphs.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.NodeLibrary.Graphs.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.Logic.BlockLibrary.Basic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.Logic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.NodeLibrary.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.YPChannel.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.API.Warlock.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\YodiwoSharp.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.NodeLibrary.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.Logic.BlockLibrary.Basic.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Release\Yodiwo.YPChannel.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Release\Yodiwo.NodeLibrary.Graphs.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Release\Yodiwo.NodeLibrary.Graphs.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Release\Yodiwo.NodeLibrary.Graphs.pdb

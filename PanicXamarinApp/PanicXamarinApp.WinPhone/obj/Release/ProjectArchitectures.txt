@@ -1,0 +1,2 @@
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.WinPhone\PanicXamarinApp.WinPhone.csproj;neutral
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.csproj;neutral

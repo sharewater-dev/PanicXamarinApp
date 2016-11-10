@@ -1,0 +1,10 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\Yodiwo.Logic.BlockLibrary.Basic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\Yodiwo.Logic.BlockLibrary.Basic.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\Yodiwo.Logic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\bin\Release\YodiwoSharp.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\obj\Release\Yodiwo.Logic.BlockLibrary.Basic.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\obj\Release\Yodiwo.Logic.BlockLibrary.Basic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.Logic.BlockLibrary.Basic\obj\Release\Yodiwo.Logic.BlockLibrary.Basic.pdb

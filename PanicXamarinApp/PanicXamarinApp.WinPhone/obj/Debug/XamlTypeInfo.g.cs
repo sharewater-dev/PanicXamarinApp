@@ -622,3 +622,5 @@ namespace PanicXamarinApp.WinPhone.PanicXamarinApp_WinPhone_XamlTypeInfo
 }
 
 
+
+

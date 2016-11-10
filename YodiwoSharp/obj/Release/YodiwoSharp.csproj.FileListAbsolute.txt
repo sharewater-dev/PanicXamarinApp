@@ -1,0 +1,7 @@
+W:\Yodiwo South Africa\Xamarin Sample Node\YodiwoLibraries\YodiwoSharp\obj\Release\YodiwoSharp.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Release\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Release\YodiwoSharp.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Release\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Release\YodiwoSharp.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Release\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Release\YodiwoSharp.pdb

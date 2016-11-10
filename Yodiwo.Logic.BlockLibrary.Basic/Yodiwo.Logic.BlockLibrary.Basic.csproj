@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E356486A-3364-4122-A1FB-773C30E0F761}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yodiwo.Logic.Blocks</RootNamespace>
+    <AssemblyName>Yodiwo.Logic.BlockLibrary.Basic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveNuGetPackages>false</ResolveNuGetPackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="Yodiwo.API.Plegma">
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Yodiwo.API.Plegma.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.Logic">
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Yodiwo.Logic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\Logic\RoundDecimal.cs" />
+    <Compile Include="Blocks\Logic\MultiTrigger.cs" />
+    <Compile Include="Blocks\Endpoints\In\RandomNumberGenerator.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutputPrepare.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutputCollector.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutput.cs" />
+    <Compile Include="Blocks\Endpoints\In\VirtualInput.cs" />
+    <Compile Include="Blocks\Endpoints\Out\UserTraceOut.cs" />
+    <Compile Include="Blocks\Logic\Ieee754.cs" />
+    <Compile Include="Blocks\Logic\Json1LevelSerializer.cs" />
+    <Compile Include="Blocks\Logic\ValueMapping.cs" />
+    <Compile Include="Blocks\Logic\InRange.cs" />
+    <Compile Include="Blocks\Logic\DictationParser.cs" />
+    <Compile Include="Blocks\Logic\Watchdog.cs" />
+    <Compile Include="Blocks\Logic\SyncBarrier.cs" />
+    <Compile Include="Blocks\Things\ThingNoIO.cs" />
+    <Compile Include="Librarian.cs" />
+    <Compile Include="Blocks\Endpoints\Endpoint.cs" />
+    <Compile Include="Blocks\Endpoints\In\Boolean.cs" />
+    <Compile Include="Blocks\Endpoints\In\Clock.cs" />
+    <Compile Include="Blocks\Endpoints\In\Constant.cs" />
+    <Compile Include="Blocks\Endpoints\In\DateTimeBlock.cs" />
+    <Compile Include="Blocks\Endpoints\EndpointIn.cs" />
+    <Compile Include="Blocks\Endpoints\In\Float.cs" />
+    <Compile Include="Blocks\Endpoints\In\WSInput.cs" />
+    <Compile Include="Blocks\Endpoints\EndpointOut.cs" />
+    <Compile Include="Blocks\Logic\AND.cs" />
+    <Compile Include="Blocks\Logic\AnyValue.cs" />
+    <Compile Include="Blocks\Logic\Calculator.cs" />
+    <Compile Include="Blocks\Logic\Comparator.cs" />
+    <Compile Include="Blocks\Logic\Counter.cs" />
+    <Compile Include="Blocks\Logic\Delay.cs" />
+    <Compile Include="Blocks\Logic\DeMux.cs" />
+    <Compile Include="Blocks\Logic\ForwardIf.cs" />
+    <Compile Include="Blocks\Logic\ForwardWhen.cs" />
+    <Compile Include="Blocks\Others\AudioSource.cs" />
+    <Compile Include="Blocks\Logic\Json1LevelDeserializer.cs" />
+    <Compile Include="Blocks\Logic\LevelScaler.cs" />
+    <Compile Include="Blocks\Logic\Normalizer.cs" />
+    <Compile Include="Blocks\Logic\NOT.cs" />
+    <Compile Include="Blocks\Logic\OR.cs" />
+    <Compile Include="Blocks\Logic\Pulse.cs" />
+    <Compile Include="Blocks\Logic\RegEx.cs" />
+    <Compile Include="Blocks\Logic\Selector.cs" />
+    <Compile Include="Blocks\Logic\SolverBarrier.cs" />
+    <Compile Include="Blocks\Logic\YStringBuilder.cs" />
+    <Compile Include="Blocks\Logic\TextMatcher.cs" />
+    <Compile Include="Blocks\Logic\Toggle.cs" />
+    <Compile Include="Blocks\Things\GroupIn.cs" />
+    <Compile Include="Blocks\Things\GroupOut.cs" />
+    <Compile Include="Blocks\Things\Helper.cs" />
+    <Compile Include="Blocks\Things\ThingIn.cs" />
+    <Compile Include="Blocks\Things\ThingOut.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Blocks\Others\VideoSource.cs" />
+    <Compile Include="Blocks\Others\WebVideoLink.cs" />
+    <Compile Include="Blocks\Endpoints\Out\HttpRequestOut.cs" />
+    <Compile Include="Blocks\Endpoints\Out\ConsoleOut.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YodiwoSharp\YodiwoSharp.csproj">
+      <Project>{8AE66ABD-D963-4E83-83A3-330156CD37A3}</Project>
+      <Name>YodiwoSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Blocks\Logic\UserCode\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

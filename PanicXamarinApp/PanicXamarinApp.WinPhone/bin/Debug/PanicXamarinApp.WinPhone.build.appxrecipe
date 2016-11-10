@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Machine>PBT-R3P8</Machine>
-    <WindowsUser>Administrator</WindowsUser>
+    <WindowsUser>Neosoft</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
@@ -49,11 +49,17 @@
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Geolocator.Abstractions.dll">
       <PackagePath>Plugin.Geolocator.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.DeviceInfo.Abstractions.dll">
       <PackagePath>Plugin.DeviceInfo.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLite-net.dll">
-      <PackagePath>SQLite-net.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.Abstractions.dll">
+      <PackagePath>Plugin.Permissions.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Yodiwo.API.Plegma.dll">
+      <PackagePath>Yodiwo.API.Plegma.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.DeviceInfo.dll">
       <PackagePath>Plugin.DeviceInfo.dll</PackagePath>
@@ -61,11 +67,26 @@
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Geolocator.dll">
       <PackagePath>Plugin.Geolocator.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Connectivity.dll">
+      <PackagePath>Plugin.Connectivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Connectivity.Abstractions.dll">
+      <PackagePath>Plugin.Connectivity.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.dll">
+      <PackagePath>Plugin.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLitePCLRaw.batteries_green.dll">
       <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\YodiwoSharp.dll">
+      <PackagePath>YodiwoSharp.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.WinPhone\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
@@ -99,6 +120,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.WinPhone\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.Logic.BlockLibrary.Basic.dll">
+      <PackagePath>PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.NodeLibrary.dll">
+      <PackagePath>PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.NodeLibrary.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.NodeLibrary.Graphs.dll">
+      <PackagePath>PanicXamarinApp\Xam_YodiwoDLL\Yodiwo.NodeLibrary.Graphs.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\Steven\Code\PanicCodeRepo\packages\Xamarin.Forms.2.2.0.45\lib\wpa81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
       <PackagePath>Xamarin.Forms.Platform.WinRT\PageControl.xbf</PackagePath>

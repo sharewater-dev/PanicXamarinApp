@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34397AB4-C513-43BE-BCBC-591D5D9FC51A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yodiwo.Logic.BlockLibrary.Basic.Universal</RootNamespace>
+    <AssemblyName>Yodiwo.Logic.BlockLibrary.Basic.Universal</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP, UNIVERSAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\Endpoints\Endpoint.cs" />
+    <Compile Include="Blocks\Endpoints\EndpointIn.cs" />
+    <Compile Include="Blocks\Endpoints\EndpointOut.cs" />
+    <Compile Include="Blocks\Endpoints\In\Boolean.cs" />
+    <Compile Include="Blocks\Endpoints\In\Clock.cs" />
+    <Compile Include="Blocks\Endpoints\In\Constant.cs" />
+    <Compile Include="Blocks\Endpoints\In\DateTimeBlock.cs" />
+    <Compile Include="Blocks\Endpoints\In\Float.cs" />
+    <Compile Include="Blocks\Endpoints\In\VirtualInput.cs" />
+    <Compile Include="Blocks\Endpoints\In\WSInput.cs" />
+    <Compile Include="Blocks\Endpoints\Out\ConsoleOut.cs" />
+    <Compile Include="Blocks\Endpoints\Out\HttpRequestOut.cs" />
+    <Compile Include="Blocks\Endpoints\Out\UserTraceOut.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutput.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutputCollector.cs" />
+    <Compile Include="Blocks\Endpoints\Out\VirtualOutputPrepare.cs" />
+    <Compile Include="Blocks\Logic\AND.cs" />
+    <Compile Include="Blocks\Logic\AnyValue.cs" />
+    <Compile Include="Blocks\Logic\Calculator.cs" />
+    <Compile Include="Blocks\Logic\Comparator.cs" />
+    <Compile Include="Blocks\Logic\Counter.cs" />
+    <Compile Include="Blocks\Logic\Delay.cs" />
+    <Compile Include="Blocks\Logic\DeMux.cs" />
+    <Compile Include="Blocks\Logic\DictationParser.cs" />
+    <Compile Include="Blocks\Logic\ForwardIf.cs" />
+    <Compile Include="Blocks\Logic\ForwardWhen.cs" />
+    <Compile Include="Blocks\Logic\Json1LevelDeserializer.cs" />
+    <Compile Include="Blocks\Logic\LevelScaler.cs" />
+    <Compile Include="Blocks\Logic\Normalizer.cs" />
+    <Compile Include="Blocks\Logic\NOT.cs" />
+    <Compile Include="Blocks\Logic\OR.cs" />
+    <Compile Include="Blocks\Logic\Pulse.cs" />
+    <Compile Include="Blocks\Logic\RegEx.cs" />
+    <Compile Include="Blocks\Logic\Selector.cs" />
+    <Compile Include="Blocks\Logic\SolverBarrier.cs" />
+    <Compile Include="Blocks\Logic\SyncBarrier.cs" />
+    <Compile Include="Blocks\Logic\TextMatcher.cs" />
+    <Compile Include="Blocks\Logic\Toggle.cs" />
+    <Compile Include="Blocks\Logic\Watchdog.cs" />
+    <Compile Include="Blocks\Logic\YStringBuilder.cs" />
+    <Compile Include="Blocks\Others\AudioSource.cs" />
+    <Compile Include="Blocks\Others\VideoSource.cs" />
+    <Compile Include="Blocks\Others\WebVideoLink.cs" />
+    <Compile Include="Blocks\Things\GroupIn.cs" />
+    <Compile Include="Blocks\Things\GroupOut.cs" />
+    <Compile Include="Blocks\Things\Helper.cs" />
+    <Compile Include="Blocks\Things\ThingIn.cs" />
+    <Compile Include="Blocks\Things\ThingOut.cs" />
+    <Compile Include="Librarian.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Yodiwo.Logic.BlockLibrary.Basic.Universal.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Blocks\Logic\UserCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\YodiwoSharp\YodiwoSharp\YodiwoSharp.Universal.csproj">
+      <Project>{c7d15b5a-5e2b-4ebf-8ab0-6ad0fb76a6c1}</Project>
+      <Name>YodiwoSharp.Universal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APIs\Plegma\Yodiwo.API.Plegma.Universal.csproj">
+      <Project>{f5b458c1-ca19-4798-9178-80640bf6790e}</Project>
+      <Name>Yodiwo.API.Plegma.Universal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yodiwo.Logic\Yodiwo.Logic.Universal.csproj">
+      <Project>{bd3136be-d903-4faf-acab-396c1674fcfa}</Project>
+      <Name>Yodiwo.Logic.Universal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\ExternalsDLLs\Universal\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

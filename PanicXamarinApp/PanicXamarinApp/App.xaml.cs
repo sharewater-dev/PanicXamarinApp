@@ -14,7 +14,6 @@ namespace PanicXamarinApp
         public App()
         {
             InitializeComponent();
-
             //  MainPage = new PanicXamarinApp.MainPage();
            //   MainPage = new DeviceLocation();
             //  MainPage = new _MasterDetailPage();
