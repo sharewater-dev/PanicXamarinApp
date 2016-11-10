@@ -65,15 +65,6 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Releas
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.View.DashBoard.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Release\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Release\PanicXamarinApp.dll.mdb

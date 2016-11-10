@@ -137,3 +137,7 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\PanicXamarinApp.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\PanicXamarinApp.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\PanicXamarinApp.dll.mdb
