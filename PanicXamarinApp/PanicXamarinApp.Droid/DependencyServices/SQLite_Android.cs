@@ -24,7 +24,7 @@ namespace PanicXamarinApp.Droid.DependencyServices
         {
             try
             {
-                var sqliteFilename = "SQLite2.db3";                //string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
+                var sqliteFilename = "SQLite3.db3";                //string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
                 //string libraryPath = Path.Combine(documentsPath, "..", "Library"); // Library folder
                 //var path = Path.Combine(libraryPath, sqliteFilename);
 

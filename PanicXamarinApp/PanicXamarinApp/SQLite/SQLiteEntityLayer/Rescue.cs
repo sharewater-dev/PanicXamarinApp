@@ -19,7 +19,7 @@ namespace PanicXamarinApp.SQLite.SQLiteEntityLayer
         // MSISDN = Cell phone number 
         public String MSISDN { get; set; }       
 
-        public string Profile { get; set; }
+        public Guid ProfileId { get; set; }
 
         public string IMEI { get; set; }
 

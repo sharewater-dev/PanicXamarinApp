@@ -9,5 +9,5 @@ namespace PanicXamarinApp.EntityModel
     public class UserInfo
     {
 
-    }
+    }  
 }

@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CommonLayer\CommonUtility.cs" />
     <Compile Include="CustomControls\NativeButton.cs" />
     <Compile Include="DependencyServices\IDevice.cs" />
     <Compile Include="DependencyServices\ISQLite.cs" />
@@ -194,9 +195,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CommonLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="View\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

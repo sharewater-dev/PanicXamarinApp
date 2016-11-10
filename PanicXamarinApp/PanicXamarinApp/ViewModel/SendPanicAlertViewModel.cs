@@ -207,6 +207,11 @@ namespace PanicXamarinApp.ViewModel
                         _rescue.DeviceVersion = _deviceInfo.DVersion;
                         _rescue.VersionNumber = _deviceInfo.VersionNumber;
 
+                        UserProfile profile = CommonLayer.CommonUtility.GetUserProfile();
+                        if(profile != null && profile.Id !=Guid.Empty)
+                        {
+                            _rescue.ProfileId = profile.Id;
+                        }
                         ResponseModel<Rescue> _TRescue = SaveRescue();
                         if (_TRescue != null && _TRescue.Status == true)
                         {
@@ -216,7 +221,7 @@ namespace PanicXamarinApp.ViewModel
                             SendLocationCounter = 0;
                             await Task.Delay(1000);
                             SendLocationCounter = "SENT";
-                            await view.DisplayAlert("Sucess!!", "Record has been successfully inserted.", "okay");
+                            await view.DisplayAlert("Sucess!!", "Your Location is detected. Operator will contact you shortly.", "okay");
                             await view.DisplayAlert("Location ", "Latitude : " + _location.Latitude + "\n  Longitude :" + _location.Longitude, "Okay");
 
                             if (Device.OS == TargetPlatform.Android)
@@ -232,6 +237,17 @@ namespace PanicXamarinApp.ViewModel
                             _rescue.DeviceVersion = _deviceInfo.DVersion;
                             _rescue.VersionNumber = _deviceInfo.VersionNumber;
                             await view.DisplayAlert("Device Info", " Model : " + _rescue.Model + " \n Platform : " + _rescue.Platform + "\n DeviceVersion : " + _rescue.DeviceVersion + "\n VersionNumber : " + _rescue.VersionNumber, "Okay");
+                            if (profile != null && profile.Id != Guid.Empty)
+                            {
+                                string profileString = string.Format("Id:{0}\n Email:{1}\n Name:{2}\n VehicleColor:{3} \n VehicleModel:{4} \n VehicleRegistation:{5}",
+                                    profile.Id, profile.Email, profile.Name, profile.VehicleColor, profile.VehicleModel, profile.VehicleRegistation);
+                                await view.DisplayAlert("User Profile", profileString, "Okay");
+                            }
+                            else
+                            {
+                                await view.DisplayAlert("User Profile", "You dont have profile in Panic app", "Okay");
+
+                            }
                         }
                         else
                         {
