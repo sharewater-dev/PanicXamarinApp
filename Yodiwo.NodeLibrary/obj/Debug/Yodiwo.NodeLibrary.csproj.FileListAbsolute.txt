@@ -1,0 +1,11 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.NodeLibrary.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.NodeLibrary.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.API.Plegma.Code.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.API.Warlock.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Yodiwo.YPChannel.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Debug\Yodiwo.NodeLibrary.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Debug\Yodiwo.NodeLibrary.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Debug\Yodiwo.NodeLibrary.pdb

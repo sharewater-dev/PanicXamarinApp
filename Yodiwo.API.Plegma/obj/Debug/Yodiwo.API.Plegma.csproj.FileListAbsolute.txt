@@ -1,0 +1,7 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\bin\Debug\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\bin\Debug\Yodiwo.API.Plegma.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\bin\Debug\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\obj\Debug\Yodiwo.API.Plegma.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\obj\Debug\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.API.Plegma\obj\Debug\Yodiwo.API.Plegma.pdb

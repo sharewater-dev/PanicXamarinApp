@@ -170,8 +170,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PanicXamarinApp\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Connectivity, Version=2.2.12.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.2.12\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
@@ -253,6 +253,26 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Yodiwo.API.Plegma, Version=1.0.6156.35143, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.API.Plegma.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.Logic.BlockLibrary.Basic">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.NodeLibrary">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.NodeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.NodeLibrary.Graphs">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.NodeLibrary.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.YPChannel">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.YPChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="YodiwoSharp, Version=1.0.6159.28816, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PanicXamarinApp\XamDLL\YodiwoSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PanicXamarinApp\PanicXamarinApp.csproj">

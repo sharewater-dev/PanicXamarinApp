@@ -42,6 +42,7 @@ namespace PanicXamarinApp.Droid.DependencyServices
                   SpecialFolder.Personal), sqliteFilename);
              //   return new SQLiteConnection(path);
                 var conn = new SQLiteConnection(path);
+               
                 return conn;
 
             }

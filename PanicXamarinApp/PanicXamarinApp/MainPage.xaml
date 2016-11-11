@@ -4,8 +4,52 @@
              xmlns:local="clr-namespace:PanicXamarinApp"
              x:Class="PanicXamarinApp.MainPage">
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0">
+      <StackLayout>
+        <ContentView Padding="0,0,0,20">
+          <Label Text="Xamarin Sample Node" FontSize="30"/>
+        </ContentView>
+
+        <StackLayout Orientation="Horizontal">
+          <Label x:Name="chk_CheckBox1_Ind" Text="Deactivated"/>
+          <Switch x:Name="chk_CheckBox1" Toggled="chk_CheckBox1_Changed"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Text : " />
+          <Label x:Name="txtbox1" />
+        </StackLayout>
+
+        <Slider x:Name="slider1" Minimum="0" Maximum="1" Stepper.Increment="0.5" ValueChanged="slider1_Changed" />
+
+        <!--<Frame BackgroundColor="Black" WidthRequest="128" HeightRequest="128">
+          <Frame BackgroundColor="White" x:Name="light1"/>
+        </Frame>-->
+
+      </StackLayout>
+
+      <!-- Pairing Indicator -->
+      <!--<Frame IsVisible="{Binding IsPairing}" IsEnabled="{Binding IsPairing}" BackgroundColor="#D000" >
+        <StackLayout VerticalOptions="Center">
+          <Label Text="{Binding OperationMsg}" FontSize="15" HorizontalOptions="Center"/>
+          <ActivityIndicator IsRunning="{Binding IsPairing}"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                       />
+        </StackLayout>
+      </Frame>-->
+    </Grid>
+
+    <Grid Grid.Row="1">
+      <Label x:Name="txtStatus"/>
+    </Grid>
+
+  </Grid>
 
 </ContentPage>

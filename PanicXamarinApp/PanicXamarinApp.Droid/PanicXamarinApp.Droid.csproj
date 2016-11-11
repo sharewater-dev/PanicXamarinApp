@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <Debugger>Xamarin</Debugger>
@@ -195,6 +195,28 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Yodiwo.API.Plegma, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.API.Plegma.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.Logic">
+      <HintPath>..\PanicXamarinApp\DLL\Yodiwo.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.Logic.BlockLibrary.Basic">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.NodeLibrary">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.NodeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.NodeLibrary.Graphs">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.NodeLibrary.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="Yodiwo.YPChannel">
+      <HintPath>..\PanicXamarinApp\XamDLL\Yodiwo.YPChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="YodiwoSharp">
+      <HintPath>..\PanicXamarinApp\XamDLL\YodiwoSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomControls\NativeButtonRenderer.cs" />
@@ -227,12 +249,6 @@
     <AndroidResource Include="Resources\values\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PanicXamarinApp\PanicXamarinApp.csproj">
-      <Project>{9166ad69-4837-421c-9b29-a0e7a373b8ba}</Project>
-      <Name>PanicXamarinApp</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Panic.png" />
@@ -278,6 +294,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Car_Jacking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PanicXamarinApp\PanicXamarinApp.csproj">
+      <Project>{461153a6-f2e4-4bd3-8efa-f1d3aa2d473d}</Project>
+      <Name>PanicXamarinApp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

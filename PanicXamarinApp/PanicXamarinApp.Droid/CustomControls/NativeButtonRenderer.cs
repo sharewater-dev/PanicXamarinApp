@@ -14,6 +14,7 @@ using PanicXamarinApp.CustomControls;
 using PanicXamarinApp.Droid.CustomControls;
 using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
+using System.IO;
 
 [assembly: ExportRenderer(typeof(NativeButton), typeof(NativeButtonRenderer))]
 namespace PanicXamarinApp.Droid.CustomControls
@@ -24,7 +25,7 @@ namespace PanicXamarinApp.Droid.CustomControls
         {
             try
             {
-                base.OnElementChanged(e);
+                base.OnElementChanged(e);              
 
                 if (this.Control == null) return;
                 var btn = Control;

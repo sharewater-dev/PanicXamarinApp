@@ -1,0 +1,6 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Debug\Yodiwo.YPChannel.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Debug\Yodiwo.YPChannel.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Debug\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Debug\Yodiwo.YPChannel.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Debug\Yodiwo.YPChannel.pdb

@@ -38,9 +38,15 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Core.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Xml.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Xml.Linq.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\PanicXamarinApp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Net.Http.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Runtime.Serialization.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.ServiceModel.Internals.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Numerics.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\System.Data.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\YodiwoSharp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Microsoft.CSharp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Release\android\assets\Mono.CSharp.dll

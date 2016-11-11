@@ -90,6 +90,9 @@
     <Compile Include="View\SendPanicAlert.xaml.cs">
       <DependentUpon>SendPanicAlert.xaml</DependentUpon>
     </Compile>
+    <Compile Include="YodiwoExample.xaml.cs">
+      <DependentUpon>YodiwoExample.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -121,9 +124,9 @@
       <HintPath>..\..\packages\Refractored.MvvmHelpers.1.1.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\MvvmHelpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Plugin.Connectivity, Version=2.2.12.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.2.12\lib\portable-net45+wp80+wp81+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+Xamarin.Mac20+UAP10\Plugin.Connectivity.dll</HintPath>
@@ -186,38 +189,26 @@
     </Reference>
     <Reference Include="Yodiwo.API.Plegma, Version=1.0.6156.35143, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\Yodiwo.API.Plegma.dll</HintPath>
-    </Reference>
-    <Reference Include="Yodiwo.API.Plegma.Code, Version=1.0.6156.35144, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\Yodiwo.API.Plegma.Code.dll</HintPath>
-    </Reference>
-    <Reference Include="Yodiwo.API.Warlock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\Yodiwo.API.Warlock.dll</HintPath>
+      <HintPath>XamDLL\Yodiwo.API.Plegma.dll</HintPath>
     </Reference>
     <Reference Include="Yodiwo.Logic">
-      <HintPath>DLLs\Yodiwo.Logic.dll</HintPath>
+      <HintPath>DLL\Yodiwo.Logic.dll</HintPath>
     </Reference>
-    <Reference Include="Yodiwo.Logic.BlockLibrary.Basic, Version=1.0.6158.31497, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Yodiwo.Logic.BlockLibrary.Basic, Version=1.0.6159.28817, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Xam_YodiwoDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
+      <HintPath>XamDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
     </Reference>
-    <Reference Include="Yodiwo.NodeLibrary, Version=1.0.6158.31496, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Yodiwo.NodeLibrary, Version=1.0.6159.28815, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Xam_YodiwoDLL\Yodiwo.NodeLibrary.dll</HintPath>
+      <HintPath>XamDLL\Yodiwo.NodeLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Yodiwo.NodeLibrary.Graphs, Version=1.0.6158.31497, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Yodiwo.NodeLibrary.Graphs, Version=1.0.6159.28817, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Xam_YodiwoDLL\Yodiwo.NodeLibrary.Graphs.dll</HintPath>
+      <HintPath>XamDLL\Yodiwo.NodeLibrary.Graphs.dll</HintPath>
     </Reference>
-    <Reference Include="Yodiwo.YPChannel, Version=1.0.6156.35046, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="YodiwoSharp, Version=1.0.6159.28816, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\Yodiwo.YPChannel.dll</HintPath>
-    </Reference>
-    <Reference Include="YodiwoSharp, Version=1.0.6156.35045, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>DLLs\YodiwoSharp.dll</HintPath>
+      <HintPath>XamDLL\YodiwoSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -235,14 +226,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Xam_YodiwoDLL\Yodiwo.Logic.BlockLibrary.Basic.dll" />
-    <Content Include="Xam_YodiwoDLL\Yodiwo.Logic.BlockLibrary.Basic.pdb" />
-    <Content Include="Xam_YodiwoDLL\Yodiwo.NodeLibrary.dll" />
-    <Content Include="Xam_YodiwoDLL\Yodiwo.NodeLibrary.Graphs.dll" />
-    <Content Include="Xam_YodiwoDLL\Yodiwo.NodeLibrary.Graphs.pdb" />
-    <Content Include="Xam_YodiwoDLL\Yodiwo.NodeLibrary.pdb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\MainPage.xaml">
@@ -279,6 +262,20 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="YodiwoExample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XamDLL\Yodiwo.API.Plegma.dll" />
+    <Content Include="XamDLL\Yodiwo.Logic.BlockLibrary.Basic.dll" />
+    <Content Include="XamDLL\Yodiwo.NodeLibrary.dll" />
+    <Content Include="XamDLL\Yodiwo.NodeLibrary.Graphs.dll" />
+    <Content Include="XamDLL\Yodiwo.YPChannel.dll" />
+    <Content Include="XamDLL\YodiwoSharp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

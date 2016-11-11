@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLL\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,13 +44,16 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Yodiwo.API.Plegma">
-      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Yodiwo.API.Plegma.dll</HintPath>
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLL\Yodiwo.API.Plegma.dll</HintPath>
     </Reference>
     <Reference Include="Yodiwo.Logic">
-      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Yodiwo.Logic.dll</HintPath>
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLL\Yodiwo.Logic.dll</HintPath>
     </Reference>
     <Reference Include="Yodiwo.Logic.BlockLibrary.Basic">
-      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLLs\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\XamDLL\Yodiwo.Logic.BlockLibrary.Basic.dll</HintPath>
+    </Reference>
+    <Reference Include="YodiwoSharp">
+      <HintPath>..\PanicXamarinApp\PanicXamarinApp\DLL\YodiwoSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -57,10 +61,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YodiwoSharp\YodiwoSharp.csproj">
-      <Project>{8ae66abd-d963-4e83-83a3-330156cd37a3}</Project>
-      <Name>YodiwoSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Yodiwo.NodeLibrary\Yodiwo.NodeLibrary.csproj">
       <Project>{8f830f7a-0a96-4329-847c-06b0a84ba4c4}</Project>
       <Name>Yodiwo.NodeLibrary</Name>

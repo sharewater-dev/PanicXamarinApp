@@ -1,0 +1,14 @@
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.NodeLibrary.Graphs.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.NodeLibrary.Graphs.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.API.Plegma.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.Logic.BlockLibrary.Basic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.Logic.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.NodeLibrary.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\YodiwoSharp.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.YPChannel.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.API.Warlock.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\bin\Debug\Yodiwo.NodeLibrary.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Debug\Yodiwo.NodeLibrary.Graphs.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Debug\Yodiwo.NodeLibrary.Graphs.dll
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary.Graphs\obj\Debug\Yodiwo.NodeLibrary.Graphs.pdb
