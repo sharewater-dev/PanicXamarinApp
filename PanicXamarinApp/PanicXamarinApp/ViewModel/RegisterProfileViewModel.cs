@@ -16,6 +16,7 @@ namespace PanicXamarinApp.ViewModel
     public class RegisterProfileViewModel : BaseNavigationViewModel
     {
         public RegisterProfile viewModel;
+        public AddEmergencyContact viewModelEC;
         private string _vehicleModel;
         private string _vehicleColor;
         private string _vehicleRegistation;
@@ -156,8 +157,9 @@ namespace PanicXamarinApp.ViewModel
             AddICECommand = new Command(AddICEEvent);
         }
 
-        private async void AddICEEvent()
+        private void AddICEEvent()
         {
+            viewModel.Navigation.PushAsync(new AddEmergencyContact());
         }
 
         private async void BackEvent()

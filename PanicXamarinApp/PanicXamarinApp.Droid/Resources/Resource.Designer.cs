@@ -26,6 +26,8 @@ namespace PanicXamarinApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Vibrate.Resource.String.ApplicationName = global::PanicXamarinApp.Droid.Resource.String.ApplicationName;
+			global::Plugin.Vibrate.Resource.String.Hello = global::PanicXamarinApp.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::PanicXamarinApp.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2954,6 +2956,12 @@ namespace PanicXamarinApp.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f080027
+			public const int ApplicationName = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int Hello = 2131230758;
 			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;

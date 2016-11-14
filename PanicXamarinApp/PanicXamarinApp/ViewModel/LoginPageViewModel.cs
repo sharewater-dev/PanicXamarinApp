@@ -87,6 +87,7 @@ namespace PanicXamarinApp
 		}
 		private void ForgotPasswordEvent()
 		{
+            viewModel.Navigation.PushAsync(new ForgotPassword());
 		}
 	}
 }

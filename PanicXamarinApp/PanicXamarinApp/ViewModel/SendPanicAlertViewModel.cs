@@ -88,9 +88,10 @@ namespace PanicXamarinApp.ViewModel
         }
 
         public async void StartCounter()
-        {
+        {           
             while (SendLocationCounter > 0)
             {
+                Plugin.Vibrate.CrossVibrate.Current.Vibration(500);
                 await Task.Delay(1000);
                 SendLocationCounter = SendLocationCounter <= 0 ? 0 : SendLocationCounter - 1;
             }

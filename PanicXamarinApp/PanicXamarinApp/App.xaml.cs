@@ -17,10 +17,10 @@ namespace PanicXamarinApp
             //  MainPage = new PanicXamarinApp.MainPage();
             //   MainPage = new DeviceLocation();
             //  MainPage = new _MasterDetailPage();
-            // MainPage = new MasterDetailPage1();
-            MainPage = new MainPage();
+            // MainPage = new MasterDetailPage1();          
+           MainPage = new MainPage();
 
-          // MainPage = new YodiwoExample();
+         //  MainPage = new YodiwoExample();
         }
 
         protected override void OnStart()

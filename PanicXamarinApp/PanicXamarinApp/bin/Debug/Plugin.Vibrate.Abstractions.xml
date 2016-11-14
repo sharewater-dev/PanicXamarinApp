@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Vibrate.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Vibrate.Abstractions.IVibrate">
+            <summary>
+            Vibration interface
+            </summary>
+        </member>
+        <member name="M:Plugin.Vibrate.Abstractions.IVibrate.Vibration(System.Int32)">
+            <summary>
+            Vibrate the phone for specified amount of time
+            </summary>
+            <param name="milliseconds">Time in Milliseconds to vibrate. 500ms is default</param>
+        </member>
+    </members>
+</doc>

@@ -36,7 +36,7 @@ namespace PanicXamarinApp
 				var record = database.Insert(entity);
 				if (record > 0)
 				{
-					_userProfile.Message = "User has been successfully registered !!";
+					_userProfile.Message = "Profile Successfully created on this device !!";
 					_userProfile.Status = true;
 				}
 				else
@@ -79,5 +79,32 @@ namespace PanicXamarinApp
 			}
 			return _userProfile;
 		}
-	}
+
+        public ResponseModel<bool> IsValidEmail(UserProfile entity)
+        {
+            ResponseModel<bool> _isValidEmail = new ResponseModel<bool>();
+            try
+            {
+                var record = database.Query<UserProfile>("Select * from UserProfile");
+                var secondResult = (from i in database.Table<UserProfile>() where i.Email.ToLower().Equals(entity.Email.ToLower()) select i).ToList();
+
+                if (secondResult.Count > 0)
+                {
+                    _isValidEmail.Status = true;
+                }
+                else
+                {
+                    _isValidEmail.Message = "Email is not registed with is..Please enter valid email address";
+                    _isValidEmail.Status = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                _isValidEmail.Message = ex.Message;
+                _isValidEmail.Status = false;
+            }
+            return _isValidEmail;
+        }
+
+    }
 }

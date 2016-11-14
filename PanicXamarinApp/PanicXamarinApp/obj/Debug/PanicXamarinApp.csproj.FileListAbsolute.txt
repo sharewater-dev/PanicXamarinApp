@@ -72,6 +72,7 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\FFImageLoading.Forms.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\FFImageLoading.Platform.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\FFImageLoading.Transformations.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\FileLib.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Mono.Android.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\MvvmHelpers.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Newtonsoft.Json.dll
@@ -83,6 +84,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Geolocator.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.Abstractions.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.Abstractions.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLite-net.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLitePCLRaw.batteries_green.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLitePCLRaw.core.dll
@@ -120,6 +123,10 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.Abstractions.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Permissions.Abstractions.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.xml
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.Abstractions.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Plugin.Vibrate.Abstractions.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\SQLite-net.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Xamarin.Forms.Core.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Xamarin.Forms.Core.xml
@@ -127,8 +134,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\Xamarin.iOS.xml
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.App.xaml.g.cs
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.YodiwoTest.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.DeviceLocation.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.IndexPage.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.MainPage.xaml.g.cs
@@ -137,8 +144,10 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.LoginPage.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.RegisterProfile.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.DashBoard.xaml.g.cs
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.YodiwoExample.xaml.g.cs
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.ForgotPassword.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.csprojResolveAssemblyReference.cache
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.View.AddEmergencyContact.xaml.g.cs
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\obj\Debug\PanicXamarinApp.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp\bin\Debug\PanicXamarinApp.dll.mdb

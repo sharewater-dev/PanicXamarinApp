@@ -115,6 +115,8 @@ class MonoPackageManager_Resources {
 		"Plugin.Geolocator.dll",
 		"Plugin.Permissions.Abstractions.dll",
 		"Plugin.Permissions.dll",
+		"Plugin.Vibrate.Abstractions.dll",
+		"Plugin.Vibrate.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.core.dll",
