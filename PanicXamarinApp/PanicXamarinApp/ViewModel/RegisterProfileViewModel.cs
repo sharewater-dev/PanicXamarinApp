@@ -15,8 +15,9 @@ namespace PanicXamarinApp.ViewModel
 {
     public class RegisterProfileViewModel : BaseNavigationViewModel
     {
+        #region Local Instance 
         public RegisterProfile viewModel;
-        public AddEmergencyContact viewModelEC;
+        public List<EmergencyContacts> _EmergencyContactsList = new List<EmergencyContacts>();
         private string _vehicleModel;
         private string _vehicleColor;
         private string _vehicleRegistation;
@@ -24,12 +25,12 @@ namespace PanicXamarinApp.ViewModel
         private string _email;
         private string _password;
         private string _confirmPassword;
-
-
         private string _Val_vehicleModel;
         private string _V_vehicleColor;
         private string _V_vehicleRegistation;
+        #endregion
 
+        #region Properties
         public string VehicleModel
         {
             get { return _vehicleModel; }
@@ -57,8 +58,6 @@ namespace PanicXamarinApp.ViewModel
                 OnPropertyChanged("VehicleRegistation");
             }
         }
-
-
         public string Name
         {
             get { return _name; }
@@ -95,7 +94,6 @@ namespace PanicXamarinApp.ViewModel
                 OnPropertyChanged("ConfirmPassword");
             }
         }
-
         public string Val_vehicleModel
         {
             get { return _Val_vehicleModel; }
@@ -124,7 +122,9 @@ namespace PanicXamarinApp.ViewModel
                 OnPropertyChanged("V_vehicleRegistation");
             }
         }
+        #endregion
 
+        #region Events
         public ICommand _submitCommand;
         public ICommand SubmitCommand
         {
@@ -145,10 +145,9 @@ namespace PanicXamarinApp.ViewModel
             private set { _backCommand = value; OnPropertyChanged("BackCommand"); }
             get { return _backCommand; }
         }
+        #endregion
 
-
-
-
+        #region RegisterProfileViewModel
         public RegisterProfileViewModel(RegisterProfile view)
         {
             viewModel = view;
@@ -156,10 +155,13 @@ namespace PanicXamarinApp.ViewModel
             BackCommand = new Command(BackEvent);
             AddICECommand = new Command(AddICEEvent);
         }
+        #endregion
+
+        #region Functions 
 
         private void AddICEEvent()
         {
-            viewModel.Navigation.PushAsync(new AddEmergencyContact());
+            viewModel.Navigation.PushAsync(new AddEmergencyContact(this));
         }
 
         private async void BackEvent()
@@ -175,7 +177,6 @@ namespace PanicXamarinApp.ViewModel
             //	SaveUserProfile();
             //}		
         }
-
 
         private async void Validation()
         {
@@ -218,6 +219,8 @@ namespace PanicXamarinApp.ViewModel
 
         }
 
+        #endregion
+
         #region SQL-DB Operation
         public async void SaveUserProfile()
         {
@@ -229,7 +232,8 @@ namespace PanicXamarinApp.ViewModel
             profile.VehicleRegistation = VehicleRegistation;
             profile.Password = Password;
             profile.Id = Guid.NewGuid();
-            ResponseModel<UserProfile> _TUserProfile = new UserDAL().RegisterUserProfile(profile);
+
+            ResponseModel<UserProfile> _TUserProfile = new UserDAL().RegisterUserProfile(profile,_EmergencyContactsList);
             if (_TUserProfile.Status == true)
             {
                 CommonUtility.LoasUserDetails(profile);

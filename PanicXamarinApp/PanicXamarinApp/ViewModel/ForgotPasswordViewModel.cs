@@ -11,43 +11,51 @@ namespace PanicXamarinApp.ViewModel
 {
     public class ForgotPasswordViewModel : BaseNavigationViewModel
     {
+        #region Instance Variable
         public string _Email = string.Empty;
         public ICommand _ForgotPasswordButton;
         public string _Message = string.Empty;
+        #endregion
 
-
+        #region Properties
         public string Email
         {
             get { return _Email; }
             set { _Email = value; OnPropertyChanged("Email"); }
         }
-        public string Message { get { return _Message; } set { _Message = value;OnPropertyChanged("Message"); } }
+        public string Message { get { return _Message; } set { _Message = value; OnPropertyChanged("Message"); } }
         public ICommand ForgotPasswordButton { get { return _ForgotPasswordButton; } set { _ForgotPasswordButton = value; OnPropertyChanged("ForgotPasswordButton"); } }
 
+        #endregion
+
+        #region ForgotPasswordViewModel
         public ForgotPasswordViewModel()
         {
             ForgotPasswordButton = new Command(ForgotPassword);
         }
+        #endregion
+
+        #region Function's
         public void ForgotPassword()
         {
             if (string.IsNullOrEmpty(Email))
                 Message = "Please entered registered mobile number";
 
             if (IsValidEmail())
-                Message = "We are working on email sending functionality.";           
-            
+                Message = "We are working on email sending functionality.";
+
         }
         public bool IsValidEmail()
         {
             UserProfile user = new UserProfile();
-            user.Email = Email;         
-
+            user.Email = Email;
             ResponseModel<bool> _forgotPass = new UserDAL().IsValidEmail(user);
             if (!_forgotPass.Status)
             {
                 Message = _forgotPass.Message;
             }
-            return _forgotPass.Status;  
+            return _forgotPass.Status;
         }
+        #endregion
     }
 }

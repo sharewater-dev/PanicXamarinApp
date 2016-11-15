@@ -55,6 +55,7 @@
     <Compile Include="SQLite\SQLiteDataAccessLayer\RescueDAL.cs" />
     <Compile Include="SQLite\SQLiteDataAccessLayer\UserDAL.cs" />
     <Compile Include="SQLite\SQLiteEntityLayer\BaseEntity.cs" />
+    <Compile Include="SQLite\SQLiteEntityLayer\EmergencyContacts.cs" />
     <Compile Include="SQLite\SQLiteEntityLayer\Location.cs" />
     <Compile Include="SQLite\SQLiteEntityLayer\PriorityTypes.cs" />
     <Compile Include="SQLite\SQLiteEntityLayer\Rescue.cs" />

@@ -11,13 +11,17 @@ namespace PanicXamarinApp.View
 {
     public partial class RegisterProfile : ContentPage
     {
+        #region Instance Variable
         RegisterProfileViewModel _registerProfileViewModel;
+        #endregion
+
+        #region RegisterProfile
         public RegisterProfile()
         {
             InitializeComponent();
             _registerProfileViewModel = new RegisterProfileViewModel(this);
             BindingContext = _registerProfileViewModel;
         }
-       
+        #endregion
     }
 }

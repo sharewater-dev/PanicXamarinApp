@@ -9,12 +9,15 @@ namespace PanicXamarinApp
 {
 	public class LoginPageViewModel : BaseNavigationViewModel
 	{
-		private LoginPage viewModel;
+        #region Instance Variable
+        private LoginPage viewModel;
 		private string _email;
 		private string _password;
 		private bool _isFormValidated = false;
+        #endregion
 
-		public string Email
+        #region Properties
+        public string Email
 		{
 			get { return _email; }
 			set
@@ -38,21 +41,25 @@ namespace PanicXamarinApp
 			private set { _loginButton = value; OnPropertyChanged("LoginButton"); }
 			get { return _loginButton; }
 		}
-
 		public ICommand _forgotPasswordButton;
 		public ICommand ForgotPasswordButton
 		{
 			private set { _forgotPasswordButton = value; OnPropertyChanged("ForgotPasswordButton"); }
 			get { return _forgotPasswordButton; }
 		}
+        #endregion
 
-		public LoginPageViewModel(LoginPage viewModel)
+        #region LoginPageViewModel
+        public LoginPageViewModel(LoginPage viewModel)
 		{
 			this.viewModel = viewModel;
 			LoginButton = new Command(LoginEvent);
 			ForgotPasswordButton = new Command(ForgotPasswordEvent);
 		}
-		private void LoginEvent()
+        #endregion
+
+        #region Function's
+        private void LoginEvent()
 		{
 			Validation();
 			if (_isFormValidated)
@@ -89,5 +96,6 @@ namespace PanicXamarinApp
 		{
             viewModel.Navigation.PushAsync(new ForgotPassword());
 		}
-	}
+        #endregion
+    }
 }

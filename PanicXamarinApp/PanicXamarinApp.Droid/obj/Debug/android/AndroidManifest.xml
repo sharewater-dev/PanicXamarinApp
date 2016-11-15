@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="PanicXamarinApp.Droid3" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="PanicXamarinApp.Droid4" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0">
   <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.READ_SMS" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -19,12 +20,12 @@
       </intent-filter>
     </activity>
     <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5ebcbedcc9f4271e586379ac7977363a7.ConnectivityChangeBroadcastReceiver" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PanicXamarinApp.Droid3.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PanicXamarinApp.Droid4.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
         <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.PanicXamarinApp.Droid3" />
+        <category android:name="mono.android.intent.category.SEPPUKU.PanicXamarinApp.Droid4" />
       </intent-filter>
     </receiver>
   </application>

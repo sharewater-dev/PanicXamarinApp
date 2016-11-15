@@ -27,34 +27,41 @@
       <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
         <StackLayout Orientation="Horizontal" >
           <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="1"   />
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding First_EC}"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding First_EC }"  ></Entry>
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
           <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="2"   />
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding Second_EC}"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding Second_EC }"  ></Entry>
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
           <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="3"   />
-          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding Third_EC}"  ></Entry>
+          <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" IsEnabled="false" Placeholder="EMPTY"  Text="{Binding Third_EC }"  ></Entry>
         </StackLayout>
       </StackLayout>
 
       <StackLayout Orientation="Vertical"  Grid.Row="2" Grid.Column="1">
         <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Title"   />
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Placeholder="MR"  Text="{Binding Salutation }"  ></Entry>
+        <!--<Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Placeholder="MR"  Text="{Binding Salutation }"  ></Entry>-->
+
+        <Picker x:Name="ddlSaturation" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  WidthRequest="150" SelectedIndex="{Binding SaturationSelectedIndex }" >
+          <Picker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="38" />
+          </Picker.HeightRequest>
+        </Picker>        
+      
       </StackLayout>
       <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="2" >
         <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="First Name"   />
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="Name"  Text="{Binding FirstName}"  ></Entry>
+        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="Name"  Text="{Binding FirstName }"  ></Entry>
       </StackLayout>
       <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="3" >
         <Label   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Text="Second Name"   />
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="SURNAME"  Text="{Binding SurName}"  ></Entry>
+        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="SURNAME"  Text="{Binding SurName }"  ></Entry>
       </StackLayout>
 
       <StackLayout Orientation="Vertical" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" >
         <Label   HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  Text="PRIMARY PHONE NUMBER"   />
-        <Entry  HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Placeholder="PHONE NUMBER"  Text="{Binding PhoneNumber}"  ></Entry>
+        <Entry  HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Placeholder="PHONE NUMBER" Keyboard="Telephone"  Text="{Binding PhoneNumber }"   ></Entry>
       </StackLayout>
 
 
@@ -64,12 +71,17 @@
 
 
       <StackLayout Grid.Row="4" Grid.Column="3"   >
-        <Label   HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  Text="{Binding RelationShip}"   />
+        <!--<Label   HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  Text="{Binding RelationShip }"   />-->
+        <Picker x:Name="ddlRelationShip" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  WidthRequest="300"  SelectedIndex="{Binding RelationShipSelectedIndex }" ><Picker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="38" />
+          </Picker.HeightRequest>
+        </Picker>
+        
       </StackLayout>
       <StackLayout ></StackLayout>
       <!--Start : Button : Save-->
       <local:NativeButton x:Name="btnSave"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"   BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                         FontSize="14" TextColor="Black" Text="Save"  HorizontalOptions="Center" Command="{Binding SaveButton}"   >
+                         FontSize="14" TextColor="Black" Text="Save"  HorizontalOptions="Center" Command="{Binding SaveButton }"   >
         <local:NativeButton.BorderRadius>
           <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
         </local:NativeButton.BorderRadius>
@@ -81,7 +93,7 @@
 
       <!--Start : Button :Back-->
       <local:NativeButton x:Name="btnBack"  Grid.Row="5" Grid.Column="3" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
-                         FontSize="10" TextColor="Black" Text="Back"  HorizontalOptions="Center" Command="{Binding BackButton}"  >
+                         FontSize="10" TextColor="Black" Text="Back"  HorizontalOptions="Center" Command="{Binding BackButton }"  >
         <local:NativeButton.BorderRadius>
           <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
         </local:NativeButton.BorderRadius>

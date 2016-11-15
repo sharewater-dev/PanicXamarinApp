@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Vibrate</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Vibrate.CrossVibrate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Plugin.Vibrate.CrossVibrate.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+    </members>
+</doc>

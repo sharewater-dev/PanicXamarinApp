@@ -28,7 +28,7 @@ namespace PanicXamarinApp
 			{
 			}
 		}
-		public ResponseModel<UserProfile> RegisterUserProfile(UserProfile entity)
+		public ResponseModel<UserProfile> RegisterUserProfile(UserProfile entity, List<EmergencyContacts> _EmergencyContactsList)
 		{
 			ResponseModel<UserProfile> _userProfile = new ResponseModel<UserProfile>();
 			try
@@ -36,6 +36,13 @@ namespace PanicXamarinApp
 				var record = database.Insert(entity);
 				if (record > 0)
 				{
+                    foreach (EmergencyContacts contact in _EmergencyContactsList)
+                    {
+                        contact.CreatedBy = entity.Id;
+                        contact.CreatedOn = System.DateTime.Now;
+                        contact.ContactUserId = entity.Id;
+                        record = database.Insert(contact);                      
+                    }
 					_userProfile.Message = "Profile Successfully created on this device !!";
 					_userProfile.Status = true;
 				}
@@ -51,9 +58,7 @@ namespace PanicXamarinApp
 				_userProfile.Status = false;
 			}
 			return _userProfile;
-		}
-
-
+		}        
 		public ResponseModel<UserProfile> CheckUser(UserProfile entity)
 		{
 			ResponseModel<UserProfile> _userProfile = new ResponseModel<UserProfile>();
@@ -79,7 +84,6 @@ namespace PanicXamarinApp
 			}
 			return _userProfile;
 		}
-
         public ResponseModel<bool> IsValidEmail(UserProfile entity)
         {
             ResponseModel<bool> _isValidEmail = new ResponseModel<bool>();

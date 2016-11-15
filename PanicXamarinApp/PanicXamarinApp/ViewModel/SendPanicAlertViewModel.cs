@@ -122,6 +122,7 @@ namespace PanicXamarinApp.ViewModel
                 }
                 else
                 {
+                    SendLocationCounter = 2;
                     await view.DisplayAlert("Error!!", "Internet connectivity is not detected.", "okay");
                     await view.Navigation.PopAsync();
                 }
@@ -129,6 +130,7 @@ namespace PanicXamarinApp.ViewModel
 
             catch (Exception ex)
             {
+                SendLocationCounter = 2;
                 await view.DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again.", "okay");
             }
 
@@ -169,11 +171,13 @@ namespace PanicXamarinApp.ViewModel
                 }
                 else
                 {
+                    SendLocationCounter = 2;
                     await view.DisplayAlert("Alert!!", "Location is not detected. Please try again", "okay");
                 }
             }
             catch (Exception ex)
             {
+                SendLocationCounter = 2;
                 await view.DisplayAlert("Alert!!", "GPS Location is disabled. Please enable and try again", "okay");
             }
         }
