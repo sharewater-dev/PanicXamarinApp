@@ -169,8 +169,11 @@ D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\ob
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 D:\Projects\Steven\Code\PanicXamarinApp\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.dll.mdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid4.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid4-Signed.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.Forms.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FFImageLoading.Forms.Droid.dll
@@ -275,9 +278,9 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\bin\PanicXamarinApp.Droid4.apk
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable-hdpi\icon.png
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\res\drawable-xhdpi\icon.png
@@ -360,8 +363,8 @@ D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid4.apk
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid4-Signed.apk
-D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\android\bin\PanicXamarinApp.Droid4.apk
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\FileLib.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PushSharp.Core.dll
+D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PushSharp.Google.dll
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\obj\Debug\PanicXamarinApp.Droid.dll.mdb
 D:\Projects\Steven\Code\PanicCodeRepo\PanicXamarinApp\PanicXamarinApp.Droid\bin\Debug\PanicXamarinApp.Droid.dll.mdb

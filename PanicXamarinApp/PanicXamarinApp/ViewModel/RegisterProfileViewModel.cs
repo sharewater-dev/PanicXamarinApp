@@ -233,13 +233,23 @@ namespace PanicXamarinApp.ViewModel
             profile.Password = Password;
             profile.Id = Guid.NewGuid();
 
-            ResponseModel<UserProfile> _TUserProfile = new UserDAL().RegisterUserProfile(profile,_EmergencyContactsList);
-            if (_TUserProfile.Status == true)
+            ResponseModel<UserProfile> _user = new UserDAL().CheckUser(profile);
+
+            if(_user.Status== false)
             {
-                CommonUtility.LoasUserDetails(profile);
-                await viewModel.DisplayAlert("Message", _TUserProfile.Message, "okay");
-                await viewModel.Navigation.PopAsync();
+                ResponseModel<UserProfile> _TUserProfile = new UserDAL().RegisterUserProfile(profile, _EmergencyContactsList);
+                if (_TUserProfile.Status == true)
+                {
+                    CommonUtility.LoasUserDetails(profile);
+                    await viewModel.DisplayAlert("Message", _TUserProfile.Message, "okay");
+                    await viewModel.Navigation.PopAsync();
+                }
             }
+            else
+            {
+                await viewModel.DisplayAlert("Message", "user already exists", "okay");
+            }
+           
         }
 
         #endregion

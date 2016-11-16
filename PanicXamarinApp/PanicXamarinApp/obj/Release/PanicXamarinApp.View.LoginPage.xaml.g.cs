@@ -17,6 +17,9 @@ namespace PanicXamarinApp.View {
     public partial class LoginPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry txtEmail;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::PanicXamarinApp.CustomControls.NativeButton btnLogin;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -25,6 +28,7 @@ namespace PanicXamarinApp.View {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(LoginPage));
+            txtEmail = this.FindByName<global::Xamarin.Forms.Entry>("txtEmail");
             btnLogin = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnLogin");
             btnForgotUserNamePassword = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnForgotUserNamePassword");
         }

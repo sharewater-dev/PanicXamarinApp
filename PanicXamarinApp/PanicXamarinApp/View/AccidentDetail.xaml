@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PanicXamarinApp.View.AccidentDetail"
+            xmlns:sys="clr-namespace:System;assembly=mscorlib"
+            xmlns:local="clr-namespace:PanicXamarinApp.CustomControls;assembly=PanicXamarinApp"
+             >
+  <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Yellow" Padding="10,10,10,10" >
+    <StackLayout >
+      <Grid  Padding="10,10,10,10">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="5*" />
+          <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="5*" />
+          <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Date" Grid.Row="0" Grid.Column="0" />
+        <Label Text="Time" Grid.Row="0" Grid.Column="1" />
+        <!-- Date="{x:Static sys:DateTime.Now}"-->
+        <DatePicker VerticalOptions="CenterAndExpand" Date="{Binding DpDate}" Grid.Row="1" Grid.Column="0">
+          <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+          <DatePicker.MinimumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+              <x:Arguments>
+                <x:String>Jan 1 2000</x:String>
+              </x:Arguments>
+            </sys:DateTime>
+          </DatePicker.MinimumDate>
+          <DatePicker.MaximumDate>
+            <sys:DateTime x:FactoryMethod="Parse">
+              <x:Arguments>
+                <x:String>Dec 31 2050</x:String>
+              </x:Arguments>
+            </sys:DateTime>
+          </DatePicker.MaximumDate>
+        </DatePicker>
+        <!--<Entry Grid.Row="1" Grid.Column="1" Text="HH:MM" />-->
+        <TimePicker Grid.Row="1" Grid.Column="1" Time="{Binding TpTime}" />
+      </Grid>
+
+    </StackLayout>
+    <StackLayout>
+      <Label Text="Location" />
+      <Entry Placeholder="LOCATION" Text="{Binding Location}" />
+    </StackLayout>
+
+    <StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="BRIEF DESCRIPTION" />
+        <Label Text="{Binding CharLeft}" />
+      </StackLayout>
+      <Entry Placeholder="DESCRIPTION" Text="{Binding Description}" />
+    </StackLayout>
+
+    <StackLayout>
+      <Label Text="PICTURE OF DAMAGES" />
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="CAMERA"  />
+        <Label Text="VISIBILITY"  />
+
+
+      </StackLayout>
+    </StackLayout>
+
+    <StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="ROAD CONDITION" />
+        <Picker x:Name="ddlRoadCondition" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  WidthRequest="150" SelectedIndex="{Binding SaturationSelectedIndex }" >
+          <Picker.HeightRequest>
+            <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="38" />
+          </Picker.HeightRequest>
+        </Picker>
+      </StackLayout>
+    </StackLayout>
+
+    <StackLayout>
+      <Label Text="INJURIES FROM ACCEDENT" />
+      <Entry Placeholder="INJURIES" Text="{Binding Injuries}" />
+    </StackLayout>
+
+    <StackLayout>
+      <!--Start : Button :REMINDER SERVICES-->
+      <local:NativeButton x:Name="btnNext" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"
+                         FontSize="10" TextColor="Black" Text="Next"  HorizontalOptions="Center" Command="{Binding NextButton }"  >
+        <local:NativeButton.BorderRadius>
+          <OnPlatform x:TypeArguments="x:Int32" iOS="0" Android="1" />
+        </local:NativeButton.BorderRadius>
+        <local:NativeButton.WidthRequest>
+          <OnPlatform x:TypeArguments="x:Double" iOS="170" Android="200" />
+        </local:NativeButton.WidthRequest>
+      </local:NativeButton>
+      <!--End : Button :REMINDER SERVICES-->
+
+    </StackLayout>
+
+  </StackLayout>
+</ContentPage>

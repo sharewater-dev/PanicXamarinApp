@@ -73,7 +73,7 @@ namespace PanicXamarinApp
 				}
 				else
 				{
-					_userProfile.Message = "Username or password does not match";
+					_userProfile.Message = "Please enter the correct login credentials ";
 					_userProfile.Status = false;
 				}
 			}

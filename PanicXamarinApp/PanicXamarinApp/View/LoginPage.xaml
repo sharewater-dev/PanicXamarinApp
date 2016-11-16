@@ -19,7 +19,7 @@ Title="Login Page"
         <ColumnDefinition Width="2.5*" />
       </Grid.ColumnDefinitions>
       <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" >
-        <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL ADDRESS" Text="{Binding Email}"  ></Entry>
+        <Entry x:Name="txtEmail"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="EMAIL ADDRESS" Text="{Binding Email}" TextChanged="TxtEmail_TextChanged" ></Entry>
         <Entry  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="PASSWORD" IsPassword="True"  Text="{Binding Password}" ></Entry>
         <!--Start : Button : Login-->
         <local:NativeButton x:Name="btnLogin" BorderColor="Black" BackgroundColor="Yellow" BorderWidth="1.5" HeightRequest="40" VerticalOptions="Center"

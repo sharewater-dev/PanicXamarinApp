@@ -13,7 +13,8 @@ namespace PanicXamarinApp
         private LoginPage viewModel;
 		private string _email;
 		private string _password;
-		private bool _isFormValidated = false;
+		private bool _isFormValidated = false; 
+   
         #endregion
 
         #region Properties
@@ -46,7 +47,9 @@ namespace PanicXamarinApp
 		{
 			private set { _forgotPasswordButton = value; OnPropertyChanged("ForgotPasswordButton"); }
 			get { return _forgotPasswordButton; }
-		}
+		}      
+
+        
         #endregion
 
         #region LoginPageViewModel
@@ -54,8 +57,9 @@ namespace PanicXamarinApp
 		{
 			this.viewModel = viewModel;
 			LoginButton = new Command(LoginEvent);
-			ForgotPasswordButton = new Command(ForgotPasswordEvent);
-		}
+            ForgotPasswordButton = new Command(ForgotPasswordEvent);         
+
+        }
         #endregion
 
         #region Function's
@@ -66,9 +70,9 @@ namespace PanicXamarinApp
 			{
 				CheckUser();
 			}
-		}
+		}     
 
-		private void Validation()
+        private void Validation()
 		{
 			if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
 			{
@@ -80,18 +84,19 @@ namespace PanicXamarinApp
 
 		private void CheckUser()
 		{
-			UserProfile user = new UserProfile();
-			user.Email = Email;
-			user.Password = Password;
+            //  viewModel.Navigation.PushAsync(new LandingPage());
+            UserProfile user = new UserProfile();
+            user.Email = Email;
+            user.Password = Password;
 
-			ResponseModel<UserProfile> _TUserProfile = new UserDAL().CheckUser(user);
-			if (_TUserProfile.Status == true)
-			{
-				viewModel.Navigation.PushAsync(new DashBoard());
-			}
-			else
-				viewModel.DisplayAlert("Error", _TUserProfile.Message, "okay");
-		}
+            ResponseModel<UserProfile> _TUserProfile = new UserDAL().CheckUser(user);
+            if (_TUserProfile.Status == true)
+            {
+                viewModel.Navigation.PushAsync(new LandingPage());
+            }
+            else
+                viewModel.DisplayAlert("Error", _TUserProfile.Message, "okay");
+        }
 		private void ForgotPasswordEvent()
 		{
             viewModel.Navigation.PushAsync(new ForgotPassword());

@@ -20,6 +20,9 @@ namespace PanicXamarinApp.View {
         private global::Xamarin.Forms.Picker ddlSaturation;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Picker ddlRelationShip;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::PanicXamarinApp.CustomControls.NativeButton btnSave;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -29,6 +32,7 @@ namespace PanicXamarinApp.View {
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(AddEmergencyContact));
             ddlSaturation = this.FindByName<global::Xamarin.Forms.Picker>("ddlSaturation");
+            ddlRelationShip = this.FindByName<global::Xamarin.Forms.Picker>("ddlRelationShip");
             btnSave = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnSave");
             btnBack = this.FindByName<global::PanicXamarinApp.CustomControls.NativeButton>("btnBack");
         }

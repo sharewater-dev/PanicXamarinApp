@@ -106,6 +106,7 @@ class MonoPackageManager_Resources {
 		"FFImageLoading.Transformations.dll",
 		"FormsViewGroup.dll",
 		"MvvmHelpers.dll",
+		"Newtonsoft.Json.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
 		"Plugin.CurrentActivity.dll",
@@ -142,6 +143,8 @@ class MonoPackageManager_Resources {
 		"Yodiwo.YPChannel.dll",
 		"YodiwoSharp.dll",
 		"PanicXamarinApp.dll",
+		"PushSharp.Core.dll",
+		"PushSharp.Google.dll",
 		"System.Runtime.dll",
 		"System.Threading.Tasks.dll",
 		"System.IO.dll",
@@ -160,11 +163,11 @@ class MonoPackageManager_Resources {
 		"System.Xml.ReaderWriter.dll",
 		"System.Dynamic.Runtime.dll",
 		"System.Text.RegularExpressions.dll",
-		"Newtonsoft.Json.dll",
 		"Yodiwo.API.Warlock.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Runtime.InteropServices.dll",
 		"System.Diagnostics.Tools.dll",
+		"FileLib.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

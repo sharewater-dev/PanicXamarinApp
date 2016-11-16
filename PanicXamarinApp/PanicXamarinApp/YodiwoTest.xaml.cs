@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Security;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Yodiwo;
 using Yodiwo.NodeLibrary;
+using FileLib;
 
 namespace PanicXamarinApp
 {
@@ -75,23 +77,32 @@ namespace PanicXamarinApp
                                                     });
 
             //create node
-            node = new Yodiwo.NodeLibrary.Node(conf,
-                                                pairmodule,
-                                                NodeDataLoad, NodeDataSave,
-                                                NodeGraphManager: nodeGraphManager
-                                                );
-            //   things: Helper.GatherThings()
+            try
+            {
+                node = new Yodiwo.NodeLibrary.Node(conf,
+                                             pairmodule,
+                                             NodeDataLoad, NodeDataSave,
+                                             NodeGraphManager: nodeGraphManager
+                                             );
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+                     //   things: Helper.GatherThings()
 
             //register node  cbs
             node.OnTransportConnected += Node_OnTransportConnected; ;
             node.OnTransportDisconnected += Node_OnTransportDisconnected;
             node.OnTransportError += Node_OnTransportError;
-            //   node.OnNodePaired += Node_OnNodePaired;
+          //  node.OnNodePaired += Node_OnNodePaired;
             node.OnThingActivated += Node_OnThingActivated; ;
             node.OnThingDeactivated += Node_OnThingDeactivated; ;
 
             //register port events
-            // RegisterPortEventHandlers();
+            RegisterPortEventHandlers();
 
             //show status form
             SetStatus("Initializing Virtual Node");
@@ -129,6 +140,11 @@ namespace PanicXamarinApp
             SetStatus("Virtual Gateway started");
         }
 
+        //private void Node_OnNodePaired(Yodiwo.API.Plegma.NodeKey nodekey, System.Security.SecureString nodesecret)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         void SetStatus(string status)
         {
             Device.BeginInvokeOnMainThread(() =>
@@ -137,48 +153,99 @@ namespace PanicXamarinApp
             });
         }
 
-        //void RegisterPortEventHandlers()
-        //{
+        void RegisterPortEventHandlers()
+        {
+            node.PortEventHandlers[Helper.TextThing.Ports[0]] = (data, isEvent) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    txtbox1.Text = data;
+                });
+            };
+
+            node.PortEventHandlers[Helper.Light1Thing.Ports[0]] = (data, isEvent) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    try { light1.Opacity = data.ParseToFloat(); } catch { }
+                });
+            };
+            node.PortEventHandlers[Helper.Text2SpeechThing.Ports[0]] = (data, isEvent) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                   // VFSharp.Tools.Speech.SpeakText(data);
+                });
+            };
+            node.PortEventHandlers[Helper.CheckBox1Thing.Ports[0]] = (data, isEvent) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    supressEvents = true;
+                    try { chk_CheckBox1.IsToggled = data.ParseToBool(); } catch { } finally { supressEvents = false; }
+                });
+            };
+            node.PortEventHandlers[Helper.Slider1Thing.Ports[0]] = (data, isEvent) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    supressEvents = true;
+                    try { slider1.Value = data.ParseToFloat(); } catch { } finally { supressEvents = false; }
+                });
+            };
 
 
-        //    node.PortEventHandlers[Helper.TextThing.Ports[0]] = data =>
-        //    {
-        //        Device.BeginInvokeOnMainThread(() =>
-        //        {
-        //            txtbox1.Text = data
-        //        });
-        //    };
-        //    node.PortEventHandlers[Helper.Light1Thing.Ports[0]] = data =>
-        //    {
-        //        Device.BeginInvokeOnMainThread(() =>
-        //        {
-        //            try { light1.Opacity = data.ParseToFloat(); } catch { }
-        //        });
-        //    };
-        //    node.PortEventHandlers[Helper.Text2SpeechThing.Ports[0]] = data =>
-        //    {
-        //        Device.BeginInvokeOnMainThread(() =>
-        //        {
-        //            //VFSharp.Tools.Speech.SpeakText(data);
-        //        });
-        //    };
-        //    node.PortEventHandlers[Helper.CheckBox1Thing.Ports[0]] = data =>
-        //    {
-        //        Device.BeginInvokeOnMainThread(() =>
-        //        {
-        //            supressEvents = true;
-        //            try { chk_CheckBox1.IsToggled = data.ParseToBool(); } catch { } finally { supressEvents = false; }
-        //        });
-        //    };
-        //    node.PortEventHandlers[Helper.Slider1Thing.Ports[0]] = data =>
-        //    {
-        //        Device.BeginInvokeOnMainThread(() =>
-        //        {
-        //            supressEvents = true;
-        //            try { slider1.Value = data.ParseToFloat(); } catch { } finally { supressEvents = false; }
-        //        });
-        //    };
-        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //node.PortEventHandlers[Helper.TextThing.Ports[0]] = data =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        txtbox1.Text = data
+            //    });
+            //};
+            //node.PortEventHandlers[Helper.Light1Thing.Ports[0]] = data =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        try { light1.Opacity = data.ParseToFloat(); } catch { }
+            //    });
+            //};
+            //node.PortEventHandlers[Helper.Text2SpeechThing.Ports[0]] = data =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        VFSharp.Tools.Speech.SpeakText(data);
+            //    });
+            //};
+            //node.PortEventHandlers[Helper.CheckBox1Thing.Ports[0]] = data =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        supressEvents = true;
+            //        try { chk_CheckBox1.IsToggled = data.ParseToBool(); } catch { } finally { supressEvents = false; }
+            //    });
+            //};
+            //node.PortEventHandlers[Helper.Slider1Thing.Ports[0]] = data =>
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        supressEvents = true;
+            //        try { slider1.Value = data.ParseToFloat(); } catch { } finally { supressEvents = false; }
+            //    });
+            //};
+        }
 
         private void Node_OnThingDeactivated(Yodiwo.API.Plegma.Thing thing)
         {
@@ -197,9 +264,11 @@ namespace PanicXamarinApp
         }
 
         //private void Node_OnNodePaired(Yodiwo.API.Plegma.NodeKey nodekey, System.Security.SecureString nodesecret)
-        //{
+        //{          
+        //    ActiveCfg.NodeKey = nodekey;
+        //    ActiveCfg.NodeSecret = nodeSecret.SecureStringToString();
+        //    ActiveCfg.Save();
 
-        //    throw new NotImplementedException();
         //}
 
         private void Node_OnTransportError(Transport Transport, TransportErrors Error, string msgStatus)
@@ -222,18 +291,24 @@ namespace PanicXamarinApp
 
         public byte[] NodeDataLoad(string Identifier, bool Secure)
         {
+            if (FileExtenstion.IsFileExist(Identifier) == false)
+                return null;
+            else
+                return FileExtenstion.ReadAllBytes(Identifier);
+
             //FileStream 
             //if (File.Exists(Identifier) == false)
             //    return null;
             //else
             //    return File.ReadAllBytes(Identifier);
-            return null;
+     
         }
 
         public bool NodeDataSave(string Identifier, byte[] Data, bool Secure)
         {
             try
             {
+                FileExtenstion.WriteAllBytes(Identifier, Data);
                 // File.WriteAllBytes(Identifier, Data);
                 return true;
             }
