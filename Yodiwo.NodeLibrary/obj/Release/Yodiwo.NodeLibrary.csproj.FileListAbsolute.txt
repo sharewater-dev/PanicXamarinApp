@@ -6,8 +6,5 @@ D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\Yodiwo.API.
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\Yodiwo.YPChannel.dll
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\YodiwoSharp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\Newtonsoft.Json.dll
-D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\YodiwoSharp.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\bin\Release\Yodiwo.YPChannel.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Release\Yodiwo.NodeLibrary.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Release\Yodiwo.NodeLibrary.dll
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.NodeLibrary\obj\Release\Yodiwo.NodeLibrary.pdb

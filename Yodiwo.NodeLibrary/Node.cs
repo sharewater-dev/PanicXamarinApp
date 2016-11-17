@@ -201,7 +201,7 @@ namespace Yodiwo.NodeLibrary
                     eNodeType nodeType = eNodeType.Unknown
                     )
         {
-            DebugEx.Assert(conf != null, "Cannot have null conf");
+          //  DebugEx.Assert(conf != null, "Cannot have null conf");
             this.conf = conf.Clone() as NodeConfig;
             this.Things = new ReadOnlyDictionary<ThingKey, Thing>(this._Things);
             this._thingTypes.AddFromSource(thingTypes);
@@ -220,11 +220,12 @@ namespace Yodiwo.NodeLibrary
 #else
                 if (!MqttTransport.GetTypeInfo().ImplementedInterfaces.Contains(typeof(Transports.ITransportMQTT)))
 #endif
-                    DebugEx.AssertAndThrow("MqttTransport transport type does not implement ITransportMQTT");
+                  //  DebugEx.AssertAndThrow("MqttTransport transport type does not implement ITransportMQTT");
                 //instanciate
                 mqtthandler = Activator.CreateInstance(MqttTransport, new object[] { this }) as Transports.ITransportMQTT;
-                if (mqtthandler == null)
-                    DebugEx.AssertAndThrow("Could not create mqtt transport from provided type");
+                //if (mqtthandler == null)
+                   // return "Could not create mqtt transport from provided type";
+                  //  DebugEx.AssertAndThrow("Could not create mqtt transport from provided type");
             }
 
             //init node discovery module
@@ -264,7 +265,8 @@ namespace Yodiwo.NodeLibrary
                 //disconnect
                 Disconnect();
             }
-            catch (Exception ex) { DebugEx.Assert(ex, "NodeLibrary DeInitialize failed"); }
+            catch (Exception ex) { //DebugEx.Assert(ex, "NodeLibrary DeInitialize failed"); 
+            }
         }
         //------------------------------------------------------------------------------------------------------------------------
 
@@ -282,7 +284,7 @@ namespace Yodiwo.NodeLibrary
             var res = this._PairingModule.StartPair(frontendUrl, redirectUrl, conf, selfUrl, onPaired, onPairFailed);
             if (!res)
             {
-                DebugEx.Assert("Could not start pairing");
+               // DebugEx.Assert("Could not start pairing");
                 return false;
             }
             //wait for pairing completion
@@ -314,10 +316,11 @@ namespace Yodiwo.NodeLibrary
                 var t1 = Tools.Http.RequestPost(backend.pairingPostUrl + "/complete", paramet2, cookies);
                 if (t1.IsSuccessStatusCode)
                     backend.pairGetKeys();
-                else
-                    DebugEx.Assert("Pairing failed (could not enter uuid)");
+                //else
+                    //DebugEx.Assert("Pairing failed (could not enter uuid)");
             }
-            catch (Exception ex) { DebugEx.Assert(ex, "Unhandled exception caught"); }
+            catch (Exception ex) {// DebugEx.Assert(ex, "Unhandled exception caught");
+            }
         }
 
         //------------------------------------------------------------------------------------------------------------------------
@@ -332,14 +335,17 @@ namespace Yodiwo.NodeLibrary
                 //inform user
                 try
                 {
-                    try { OnNodePaired?.Invoke(this.NodeKey, this.NodeSecret); } catch (Exception ex) { DebugEx.TraceError(ex, "UserCode exception caught"); }
+                    try { OnNodePaired?.Invoke(this.NodeKey, this.NodeSecret); } catch (Exception ex) { //DebugEx.TraceError(ex, "UserCode exception caught");
+                    }
                 }
-                catch (Exception ex) { DebugEx.Assert(ex, "Unhandled exception caught from user callback"); }
+                catch (Exception ex) {// DebugEx.Assert(ex, "Unhandled exception caught from user callback"); 
+                }
 
                 //finished pairing
                 this._PairingModule.EndPair();
             }
-            catch (Exception ex) { DebugEx.Assert(ex, "Unhandled exception caught"); }
+            catch (Exception ex) {// DebugEx.Assert(ex, "Unhandled exception caught"); 
+            }
         }
 
         //------------------------------------------------------------------------------------------------------------------------
@@ -353,9 +359,11 @@ namespace Yodiwo.NodeLibrary
                 //inform user
                 try
                 {
-                    try { OnNodePairingFailed?.Invoke(Message); } catch (Exception ex) { DebugEx.TraceError(ex, "UserCode exception caught"); }
+                    try { OnNodePairingFailed?.Invoke(Message); } catch (Exception ex) { //DebugEx.TraceError(ex, "UserCode exception caught"); 
+                    }
                 }
-                catch (Exception ex) { DebugEx.Assert(ex, "Unhandled exception caught from user callback"); }
+                catch (Exception ex) { //DebugEx.Assert(ex, "Unhandled exception caught from user callback"); 
+                }
 
                 //finished pairing
                 this._PairingModule.EndPair();

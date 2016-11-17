@@ -1,11 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="PanicXamarinApp.Droid4" android:installLocation="preferExternal">
 	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
-  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-  <uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_SMS" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.CAMERA" />
- 
-	<application android:label="PanicXamarinApp.Droid"></application>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+  
+    <permission android:name="android.permission.C2D_MESSAGE"        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.C2D_MESSAGE" />
+
+	<application android:label="PanicXamarinApp.Droid">
+    
+  <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.example.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="gcm.play.android.samples.com.gcmquickstart.RegistrationIntentService"
+            android:exported="false">
+        </service>
+  </application>
 </manifest>
+<!--<permission android:name="<your-package-name>.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="<your-package-name>.permission.C2D_MESSAGE" />
+
+    <application ...>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.example.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.example.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="gcm.play.android.samples.com.gcmquickstart.RegistrationIntentService"
+            android:exported="false">
+        </service>
+    </application>-->
+<!--If you want to support pre-4.4 KitKat devices, add the following action to the intent filter declaration for the receiver: <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+Check for Google Play Services APK
+
+Apps that rely on the Play Services SDK should always check the device for a compatible Google Play services APK before accessing Google Play services features. It is recommended to do this in two places: in the main activity's onCreate() method, and in its onResume() method. The check in onCreate() ensures that the app can't be used without a successful check. The check in onResume() ensures that if the user returns to the running app through some other means, such as through the back button, the check is still performed. If the device doesn't have a compatible Google Play services APK, your app can call GooglePlayServicesUtil.getErrorDialog() to allow users to download the APK from the Google Play Store or enable it in the device's system settings. For a code example, see Set up Google Play Services SDK.
+
+Obtain a registration token
+
+An Android application needs to register with GCM connection servers before it can receive messages. When an app registers, it receives a registration token and sends it to the app server. The client app should store a boolean value indicating whether the registration token has been sent to the server.
+
+Google provides the Instance ID API to handle the creation and updating of registration tokens. To use this API, include InstanceIDListenerService in the manifest:-->
+<!--<service android:name="[.MyInstanceIDService]" android:exported="false">
+  <intent-filter>
+         <action android:name="com.google.android.gms.iid.InstanceID"/>
+  </intent-filter>
+</service>-->

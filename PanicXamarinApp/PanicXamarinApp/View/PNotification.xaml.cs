@@ -15,6 +15,8 @@ namespace PanicXamarinApp.View
         {
             InitializeComponent();
            DependencyService.Get<IPushNotification>().sendNotification();
+
+      
         }
     }
 }

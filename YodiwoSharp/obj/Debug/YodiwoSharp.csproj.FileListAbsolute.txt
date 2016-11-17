@@ -1,6 +1,5 @@
 D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Debug\YodiwoSharp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Debug\YodiwoSharp.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\bin\Debug\Newtonsoft.Json.dll
-D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Debug\YodiwoSharp.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Debug\YodiwoSharp.dll
 D:\Projects\Steven\Code\PanicCodeRepo\YodiwoSharp\obj\Debug\YodiwoSharp.pdb

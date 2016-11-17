@@ -2,7 +2,6 @@ D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Release\Yodiwo.YPChan
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Release\Yodiwo.YPChannel.pdb
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Release\Newtonsoft.Json.dll
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Release\YodiwoSharp.dll
-D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\bin\Release\YodiwoSharp.pdb
-D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Release\Yodiwo.YPChannel.csprojResolveAssemblyReference.cache
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Release\Yodiwo.YPChannel.dll
 D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Release\Yodiwo.YPChannel.pdb
+D:\Projects\Steven\Code\PanicCodeRepo\Yodiwo.YPChannel\obj\Release\Yodiwo.YPChannel.csprojResolveAssemblyReference.cache

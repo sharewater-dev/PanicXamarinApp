@@ -18,9 +18,9 @@ namespace PanicXamarinApp
             //   MainPage = new DeviceLocation();
             //  MainPage = new _MasterDetailPage();
             // MainPage = new MasterDetailPage1();          
-             MainPage = new MainPage();
+           //  MainPage = new MainPage();
 
-          //  MainPage = new PNotification();
+            MainPage = new PNotification();
         // MainPage = new YodiwoTest();
         }
 
